@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# MentorSpec Base Installation Script
+# OwnYourCode Base Installation Script
 # AI-Mentored Development for Juniors
 #
-# Usage: curl -sSL https://raw.githubusercontent.com/DanielPodolsky/mentor-spec/main/scripts/base-install.sh | bash
+# Usage: curl -sSL https://raw.githubusercontent.com/DanielPodolsky/ownyourcode/main/scripts/base-install.sh | bash
 
 set -e
 
@@ -15,8 +15,8 @@ BLUE='\033[0;34m'
 NC='\033[0m'
 
 # Config
-REPO_URL="https://github.com/DanielPodolsky/mentor-spec.git"
-INSTALL_DIR="$HOME/mentor-spec"
+REPO_URL="https://github.com/DanielPodolsky/ownyourcode.git"
+INSTALL_DIR="$HOME/ownyourcode"
 
 # Helpers
 info() { echo -e "${BLUE}[INFO]${NC} $1"; }
@@ -27,7 +27,7 @@ error() { echo -e "${RED}[ERROR]${NC} $1"; exit 1; }
 # Header
 echo ""
 echo -e "${GREEN}╔═══════════════════════════════════════════════════════╗${NC}"
-echo -e "${GREEN}║            MentorSpec Installation                    ║${NC}"
+echo -e "${GREEN}║            OwnYourCode Installation                    ║${NC}"
 echo -e "${GREEN}║      AI-Mentored Development for Juniors              ║${NC}"
 echo -e "${GREEN}╚═══════════════════════════════════════════════════════╝${NC}"
 echo ""
@@ -37,15 +37,15 @@ echo ""
 # ============================================================================
 
 if [ -d "$INSTALL_DIR" ]; then
-    warn "MentorSpec already installed at $INSTALL_DIR"
+    warn "OwnYourCode already installed at $INSTALL_DIR"
     echo ""
     read -p "Update existing installation? (y/N): " update
     if [ "$update" = "y" ] || [ "$update" = "Y" ]; then
-        info "Updating MentorSpec..."
+        info "Updating OwnYourCode..."
         cd "$INSTALL_DIR"
         if [ -d ".git" ]; then
             git pull origin main
-            success "MentorSpec updated!"
+            success "OwnYourCode updated!"
         else
             warn "Not a git repo. Reinstalling..."
             cd ..
@@ -54,20 +54,20 @@ if [ -d "$INSTALL_DIR" ]; then
     else
         info "Keeping existing installation."
         echo ""
-        info "To use MentorSpec in a project:"
+        info "To use OwnYourCode in a project:"
         echo "  cd your-project"
-        echo "  ~/mentor-spec/scripts/project-install.sh"
+        echo "  ~/ownyourcode/scripts/project-install.sh"
         echo ""
         exit 0
     fi
 fi
 
 # ============================================================================
-# Install MentorSpec
+# Install OwnYourCode
 # ============================================================================
 
 if [ ! -d "$INSTALL_DIR" ]; then
-    info "Installing MentorSpec to $INSTALL_DIR..."
+    info "Installing OwnYourCode to $INSTALL_DIR..."
 
     # Try git clone first
     if command -v git &> /dev/null; then
@@ -76,11 +76,11 @@ if [ ! -d "$INSTALL_DIR" ]; then
     else
         # Fallback to curl + unzip
         warn "git not found, downloading zip..."
-        ZIP_URL="https://github.com/DanielPodolsky/mentor-spec/archive/refs/heads/main.zip"
-        curl -sSL "$ZIP_URL" -o /tmp/mentor-spec.zip
-        unzip -q /tmp/mentor-spec.zip -d /tmp
-        mv /tmp/mentor-spec-main "$INSTALL_DIR"
-        rm /tmp/mentor-spec.zip
+        ZIP_URL="https://github.com/DanielPodolsky/ownyourcode/archive/refs/heads/main.zip"
+        curl -sSL "$ZIP_URL" -o /tmp/ownyourcode.zip
+        unzip -q /tmp/ownyourcode.zip -d /tmp
+        mv /tmp/ownyourcode-main "$INSTALL_DIR"
+        rm /tmp/ownyourcode.zip
         success "Downloaded and extracted"
     fi
 fi
@@ -94,6 +94,63 @@ chmod +x "$INSTALL_DIR/scripts/"*.sh
 success "Scripts are executable"
 
 # ============================================================================
+# Create global learning structure (v2.1 - Global Learning)
+# ============================================================================
+
+info "Creating global learning registry..."
+mkdir -p "$INSTALL_DIR/learning/patterns"
+mkdir -p "$INSTALL_DIR/learning/failures"
+
+if [ ! -f "$INSTALL_DIR/learning/LEARNING_REGISTRY.md" ]; then
+    cat > "$INSTALL_DIR/learning/LEARNING_REGISTRY.md" << 'EOF'
+# Global Learning Registry
+
+> Automatically updated by `/retrospective`. Query with `/advise`.
+> This file tracks your growth as an engineer across ALL projects.
+> Location: ~/ownyourcode/learning/ (global, not project-specific)
+
+---
+
+## Patterns (Reusable Solutions)
+
+Successful patterns you've discovered and can reuse:
+
+| Date | Domain | Pattern | Project | Location |
+|------|--------|---------|---------|----------|
+| | | *No patterns recorded yet* | | |
+
+---
+
+## Failures (Anti-Patterns)
+
+Mistakes you've made and learned from (the most valuable learnings):
+
+| Date | Domain | Issue | Project | Location |
+|------|--------|-------|---------|----------|
+| | | *No failures documented yet* | | |
+
+---
+
+## Competency Progression
+
+Track your growth over time:
+
+| Week | Level | Evidence |
+|------|-------|----------|
+| Start | ⭐ (learning) | Beginning OwnYourCode journey |
+
+---
+
+## Detailed Entries
+
+*Entries will be added here chronologically as you complete `/retrospective` sessions.*
+EOF
+    success "Global learning registry created at ~/ownyourcode/learning/"
+else
+    success "Global learning registry already exists"
+fi
+
+# ============================================================================
 # Complete
 # ============================================================================
 
@@ -103,7 +160,7 @@ echo -e "${GREEN}║          Installation Complete!                       ║${
 echo -e "${GREEN}╚═══════════════════════════════════════════════════════╝${NC}"
 echo ""
 
-success "MentorSpec installed to ~/mentor-spec/"
+success "OwnYourCode installed to ~/ownyourcode/"
 echo ""
 
 info "Next steps:"
@@ -111,13 +168,13 @@ echo ""
 echo "  1. Go to your project:"
 echo "     cd your-project"
 echo ""
-echo "  2. Install MentorSpec into that project:"
-echo "     ~/mentor-spec/scripts/project-install.sh"
+echo "  2. Install OwnYourCode into that project:"
+echo "     ~/ownyourcode/scripts/project-install.sh"
 echo ""
 echo "  3. Open Claude Code and run:"
-echo "     /mentor-spec:init"
+echo "     /own:init"
 echo ""
 
-info "Remember: MentorSpec makes AI your MENTOR, not your coder."
+info "Remember: OwnYourCode makes AI your MENTOR, not your coder."
 info "You write the code. You build the skills. You own your career."
 echo ""

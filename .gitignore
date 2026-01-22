@@ -11,3 +11,16 @@
 
 # Logs
 *.log
+
+# Testing Files
+TEST_WORKFLOWS.md
+
+# Non-OwnYourCode projects and experiments
+remotion/
+.kiro/
+.opencode/
+.agents/
+
+# Non-OwnYourCode skills (personal/experimental)
+.claude/skills/frontend-design
+.claude/skills/remotion-best-practices

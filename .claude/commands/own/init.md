@@ -1,21 +1,21 @@
 ---
 name: init
-description: Initialize MentorSpec project with mission, stack, and roadmap
+description: Initialize OwnYourCode project with mission, stack, and roadmap
 allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, Bash, mcp__context7__resolve-library-id, mcp__context7__get-library-docs, mcp__octocode__githubSearchRepositories, mcp__octocode__githubViewRepoStructure
 ---
 
-# /mentor-spec:init
+# /own:init
 
-Initialize a MentorSpec project by defining the mission, detecting the stack, and creating a roadmap.
+Initialize a OwnYourCode project by defining the mission, detecting the stack, and creating a roadmap.
 
 ## Overview
 
 This command works for both **new projects** (empty directory) and **existing projects** (mid-development).
 
 **Output:**
-- `mentorspec/product/mission.md` — Project purpose and vision
-- `mentorspec/product/stack.md` — Technology decisions and rationale
-- `mentorspec/product/roadmap.md` — Phased development plan
+- `ownyourcode/product/mission.md` — Project purpose and vision
+- `ownyourcode/product/stack.md` — Technology decisions and rationale
+- `ownyourcode/product/roadmap.md` — Phased development plan
 
 ---
 
@@ -39,7 +39,7 @@ Before anything else, verify MCPs are available:
 ```
 ⚠️ MCP servers not fully configured.
 
-MentorSpec uses these MCPs to provide accurate, up-to-date guidance:
+OwnYourCode uses these MCPs to provide accurate, up-to-date guidance:
 
 📖 Context7 — Official documentation lookup
 🔍 Octocode — GitHub best practices search
@@ -47,7 +47,7 @@ MentorSpec uses these MCPs to provide accurate, up-to-date guidance:
 To install (takes 30 seconds each):
   claude mcp add --transport http context7 https://mcp.context7.com/mcp
 
-📖 Full setup guide: mentorspec/guides/context7-setup.md
+📖 Full setup guide: ownyourcode/guides/context7-setup.md
 ```
 
 3. **If available:** Continue silently to Phase 1.
@@ -68,9 +68,16 @@ Before asking questions, analyze the project silently:
    - Backend: Express, FastAPI, Go, Rust, etc.
    - Database: PostgreSQL, MongoDB, Prisma, etc.
 
-3. **Use Octocode for reference:** If building something similar to popular projects, note them for inspiration.
+3. **Detect package manager (for JS/TS projects):**
+   - `package-lock.json` → npm
+   - `pnpm-lock.yaml` → pnpm
+   - `bun.lockb` → bun
+   - `yarn.lock` → yarn
+   - No lock file → will ask in Phase 5
 
-4. **Store detection results** — do NOT ask about stack unless it's a new/empty project.
+4. **Use Octocode for reference:** If building something similar to popular projects, note them for inspiration.
+
+5. **Store detection results** — do NOT ask about stack unless it's a new/empty project.
 
 ---
 
@@ -134,13 +141,24 @@ Options:
 
 ---
 
-### Phase 5: Stack Confirmation (Only if needed)
+### Phase 5: Stack & Package Manager Confirmation
 
 **If technologies were detected:**
-Show what was detected and confirm silently. No questions needed.
+Show what was detected. For the package manager, provide brief education:
+> "You're using [package manager]. [Educational snippet about it]."
+
+**Package Manager Education (as of 2026):**
+
+- **npm**: Comes bundled with Node.js — always available out of the box. The universal default that every JavaScript developer knows. Slower than alternatives but has the largest ecosystem and community support.
+
+- **pnpm**: Speed and disk efficiency focused. Uses hard links to a global store, saving up to 70% disk space. Enforces strict dependency declarations (prevents accidental access to undeclared packages). Excellent for monorepos. Faster than both npm and Yarn.
+
+- **bun**: More than a package manager — it's an entire JavaScript runtime, bundler, and test runner written in Zig. Blazing fast (up to 30x faster than npm). Newer but rapidly growing community. Some edge cases with obscure packages, but compatibility is high.
+
+- **yarn**: Created by Meta to solve npm's early shortcomings. Yarn v4+ (Berry) uses Plug'n'Play which eliminates node_modules entirely, enabling "zero installs" — clone and run immediately. Mature and battle-tested. Good Corepack integration with Node.js.
 
 **If NO technologies detected (empty/new project):**
-Use AskUserQuestion:
+Use AskUserQuestion for stack:
 
 ```
 Question: "What's your primary technology stack?"
@@ -152,10 +170,58 @@ Options:
 4. Node.js/Express
 ```
 
+Then for JS/TS stacks, ask about package manager:
+
+```
+Question: "Which package manager do you want to use?"
+
+Options:
+1. npm — Bundled with Node.js, universal, largest ecosystem
+2. pnpm — Fast, 70% less disk space, strict dependencies, great for monorepos
+3. bun — Blazing fast (30x npm), also a runtime/bundler, newer but powerful
+4. yarn — Mature, Plug'n'Play for zero-installs, created by Meta
+```
+
+**Version Verification (MANDATORY):**
+After stack is confirmed, use BOTH MCPs to verify latest versions:
+
+1. Use Context7 to get official documentation for detected technologies
+2. Use OctoCode to verify what versions production repos are using
+3. If package.json shows outdated versions, warn:
+   > "Your package.json shows [X] version [old]. The latest stable is [new]. Consider upgrading."
+4. Document all versions in stack.md
+
 **Optional Octocode Research:**
 > "Let me check Octocode to find well-structured projects using [stack] for inspiration..."
 
 Use `githubSearchRepositories` to find reference projects.
+
+---
+
+### Phase 5.5: Scaffolding Option (Fresh Projects Only)
+
+**Only for new/empty projects with no existing code:**
+
+Use AskUserQuestion:
+
+```
+Question: "Would you like me to scaffold the project structure?"
+
+Options:
+1. Yes, scaffold it — Set up folders, configs, and boilerplate
+2. No, I'll set it up myself — I prefer to learn by doing
+```
+
+**If they choose scaffolding:**
+
+1. Use OctoCode to research modern project structures for their stack
+2. Search for well-rated starter templates
+3. Generate appropriate:
+   - Folder structure (src/, components/, etc.)
+   - Config files (tsconfig.json, .eslintrc, etc.)
+   - Basic boilerplate
+4. Explain each file/folder created so they understand the structure
+5. Document the structure in stack.md
 
 ---
 
@@ -196,17 +262,27 @@ When these things work, the project is COMPLETE:
 
 ## Detected/Chosen Stack
 
-| Layer | Technology | Purpose |
-|-------|------------|---------|
-| Frontend | [Detected] | [Auto-filled purpose] |
-| Backend | [Detected] | [Auto-filled purpose] |
-| Database | [Detected] | [Auto-filled purpose] |
-| Styling | [Detected] | [Auto-filled purpose] |
+| Layer | Technology | Version | Purpose |
+|-------|------------|---------|---------|
+| Frontend | [Detected] | [Verified] | [Auto-filled purpose] |
+| Backend | [Detected] | [Verified] | [Auto-filled purpose] |
+| Database | [Detected] | [Verified] | [Auto-filled purpose] |
+| Styling | [Detected] | [Verified] | [Auto-filled purpose] |
+
+## Package Manager
+
+**Using:** [npm/pnpm/bun/yarn]
+
+[Brief education snippet from Phase 5]
 
 ## Why These Choices?
 
 [If detected: "These were already in your project."]
 [If chosen: Brief rationale for the stack choice]
+
+## Version Notes
+
+[Any outdated versions detected and recommendations]
 
 ## Reference Projects (via Octocode)
 
@@ -260,7 +336,7 @@ Priority: LOW
 After generating files, provide:
 
 ```
-MentorSpec initialized!
+OwnYourCode initialized!
 
 Problem: [One-line from their answer]
 For: [Who they selected]
@@ -268,13 +344,13 @@ Done when: [Summary of their definition]
 Stack: [Technologies]
 
 Created:
-- mentorspec/product/mission.md
-- mentorspec/product/stack.md
-- mentorspec/product/roadmap.md
+- ownyourcode/product/mission.md
+- ownyourcode/product/stack.md
+- ownyourcode/product/roadmap.md
 
-Next step: Run /mentor-spec:feature to plan your first feature.
+Next step: Run /own:feature to plan your first feature.
 
-Pro tip: Before starting work, run /mentor-spec:advise to gather
+Pro tip: Before starting work, run /own:advise to gather
 intelligence from your learning registry and research tools.
 ```
 

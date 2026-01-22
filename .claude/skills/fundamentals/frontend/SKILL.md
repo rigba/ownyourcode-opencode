@@ -1,6 +1,13 @@
 ---
-name: Frontend Fundamentals
-description: Auto-invoke when reviewing React, Vue, or frontend component code. Enforces component architecture, state management patterns, and UI best practices.
+name: frontend-fundamentals
+description: |
+  TRIGGERS: "review my component", "is this good React?", "check my UI", "component review",
+  "building component", "creating UI", "adding React", "implementing hook", "rendering",
+  "making a form", "building a page", "creating modal", "adding state", "useEffect",
+  React, Vue, components, state management, hooks, props, rendering, JSX, CSS, Tailwind.
+  USE WHEN: Junior is BUILDING UI components, managing state, handling events, or structuring frontend code.
+  PROVIDES: Component architecture, state patterns, hooks best practices, rendering optimization.
+  PROACTIVE: Triggers when junior mentions building frontend features, not just reviewing.
 ---
 
 # Frontend Fundamentals Review

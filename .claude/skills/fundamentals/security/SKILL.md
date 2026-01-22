@@ -1,6 +1,13 @@
 ---
-name: Security Fundamentals
-description: Auto-invoke when reviewing authentication, authorization, input handling, data exposure, or any user-facing code. Enforces OWASP top 10 awareness and security-first thinking.
+name: security-fundamentals
+description: |
+  TRIGGERS: "is this secure?", "security review", "check for vulnerabilities", "auth check",
+  "building auth", "implementing login", "storing passwords", "API keys", "user input",
+  "adding authentication", "user credentials", "session handling", "token storage",
+  authentication, authorization, input validation, SQL injection, XSS, OWASP, passwords, tokens, JWT.
+  USE WHEN: Junior is BUILDING auth flows, handling user input, storing sensitive data, or working with APIs.
+  PROVIDES: OWASP Top 10 checks, input validation patterns, auth best practices, security anti-patterns.
+  PROACTIVE: Triggers when junior mentions building security-related features, not just reviewing.
 ---
 
 # Security Fundamentals Review

@@ -1,6 +1,13 @@
 ---
-name: Performance Fundamentals
-description: Auto-invoke when reviewing loops, data fetching, rendering, database queries, or resource-intensive operations. Identifies N+1 queries, unnecessary re-renders, memory leaks, and scalability issues.
+name: performance-fundamentals
+description: |
+  TRIGGERS: "is this performant?", "will this scale?", "performance check", "too slow",
+  "fetching data", "loading list", "rendering many", "large dataset", "lots of items",
+  "mapping over", "looping through", "pagination", "infinite scroll", "caching",
+  N+1 queries, re-renders, memory leaks, Big O, optimization, caching, lazy loading, pagination.
+  USE WHEN: Junior is BUILDING features with loops, data fetching, lists, or resource-intensive operations.
+  PROVIDES: N+1 detection, complexity analysis, caching strategies, scalability assessment.
+  PROACTIVE: Triggers when junior mentions building features that could have performance implications.
 ---
 
 # Performance Fundamentals Review

@@ -1,6 +1,13 @@
 ---
-name: Testing Fundamentals
-description: Auto-invoke when reviewing test files or discussing testing strategy. Enforces testing pyramid, strategic coverage, and stack-appropriate frameworks.
+name: testing-fundamentals
+description: |
+  TRIGGERS: "how do I test this?", "write tests", "what should I test?", "testing strategy",
+  "need tests", "adding tests", "test coverage", "TDD", "test first", "unit test",
+  "should I test", "testing this", "mock this", "integration test", "E2E",
+  unit tests, integration tests, E2E, Vitest, Jest, Playwright, test coverage, mocking, TDD.
+  USE WHEN: Junior is BUILDING tests, asking about testing strategy, or finishing features without tests.
+  PROVIDES: Testing pyramid, test structure, mocking patterns, coverage strategy, framework guidance.
+  PROACTIVE: Triggers when junior mentions tests or when features lack tests.
 ---
 
 # Testing Fundamentals Review

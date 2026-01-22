@@ -1,6 +1,11 @@
 ---
-name: Testing Gate
-description: Gate 6 - Verify tests exist and cover critical paths. Issues result in WARNINGS (encourages tests, doesn't block).
+name: testing-gate
+description: |
+  TRIGGERS: "do I need tests?", "test coverage check", "ready to merge", "pre-merge review",
+  test verification, coverage check, missing tests, test strategy.
+  USE WHEN: Code is ready to merge and needs test coverage verification.
+  PROVIDES: Test existence check, coverage assessment, testing encouragement.
+  GATE TYPE: WARNING - Encourages tests but doesn't block.
 ---
 
 # Gate 6: Testing Verification

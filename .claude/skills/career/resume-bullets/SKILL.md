@@ -1,6 +1,10 @@
 ---
-name: Resume Bullet Extraction
-description: Auto-invoke after task completion to generate powerful resume bullet points from completed work.
+name: resume-bullet-extraction
+description: |
+  TRIGGERS: "resume bullet", "portfolio update", "how should I describe this?", "job application",
+  resume writing, portfolio, achievement bullets, quantified impact, career documentation.
+  USE WHEN: Completing significant tasks, updating resume, building portfolio, job searching.
+  PROVIDES: Action-verb bullets, quantified achievements, recruiter-friendly descriptions.
 ---
 
 # Resume Bullet Extraction
@@ -217,7 +221,7 @@ Use the formula: Verb + What + Technical Context + Impact
 
 Bullets are compiled in STAR story files:
 ```
-mentorspec/career/stories/[date]-[feature-name].md
+ownyourcode/career/stories/[date]-[feature-name].md
 ```
 
 The resume bullet appears at the end of each story for easy extraction.

@@ -1,6 +1,13 @@
 ---
-name: Engineering Fundamentals
-description: Auto-invoke for general code quality review. Enforces naming conventions, function size, DRY principles, SOLID principles, and code organization.
+name: engineering-fundamentals
+description: |
+  TRIGGERS: "review my code", "is this clean?", "code review", "refactor this", "code quality",
+  "refactoring", "cleaning up", "organizing", "structuring code", "naming this",
+  "splitting function", "extract method", "too long", "messy code", "better way",
+  naming conventions, DRY, SOLID, clean code, refactoring, code organization, best practices.
+  USE WHEN: Junior is refactoring, organizing code, or asking about code quality and naming.
+  PROVIDES: Naming standards, function size limits, DRY enforcement, SOLID principles, organization.
+  PROACTIVE: Triggers when junior mentions refactoring or improving code structure.
 ---
 
 # Engineering Fundamentals Review

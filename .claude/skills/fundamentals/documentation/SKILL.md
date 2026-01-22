@@ -1,6 +1,13 @@
 ---
-name: Documentation Fundamentals
-description: Auto-invoke when reviewing README files, JSDoc comments, or inline documentation. Enforces "WHY not WHAT" principle.
+name: documentation-fundamentals
+description: |
+  TRIGGERS: "is this documented?", "review my README", "check my docs", "document this",
+  "adding comments", "updating README", "documenting API", "JSDoc", "docstring",
+  "explaining code", "adding description", "API docs", "type annotations",
+  README, JSDoc, docstrings, inline comments, API documentation, code comments.
+  USE WHEN: Junior is BUILDING documentation, adding comments, or explaining code.
+  PROVIDES: WHY-not-WHAT enforcement, README structure, JSDoc standards, comment anti-patterns.
+  PROACTIVE: Triggers when junior mentions documenting or explaining code.
 ---
 
 # Documentation Fundamentals Review

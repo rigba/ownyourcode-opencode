@@ -1,6 +1,13 @@
 ---
-name: Database Fundamentals
-description: Auto-invoke when reviewing schema design, database queries, ORM usage, or migrations. Enforces normalization, indexing awareness, query optimization, and migration safety.
+name: database-fundamentals
+description: |
+  TRIGGERS: "review my query", "is this SQL safe?", "check my schema", "database review",
+  "creating schema", "writing query", "adding migration", "connecting database", "designing tables",
+  "adding model", "database relationship", "foreign key", "Prisma model", "MongoDB collection",
+  SQL, MongoDB, Prisma, schema, queries, migrations, indexes, normalization, ORM, joins.
+  USE WHEN: Junior is BUILDING database schemas, writing queries, creating migrations, or designing data models.
+  PROVIDES: Schema design patterns, query optimization, N+1 detection, migration safety checks.
+  PROACTIVE: Triggers when junior mentions building database features, not just reviewing.
 ---
 
 # Database Fundamentals Review

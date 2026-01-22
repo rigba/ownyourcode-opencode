@@ -1,6 +1,11 @@
 ---
-name: Ownership Gate
-description: Verify the junior can explain and defend every line of code they wrote. This gate BLOCKS completion if failed.
+name: ownership-gate
+description: |
+  TRIGGERS: "I'm done", "task complete", "finished coding", "ready for review", "/done",
+  code explanation, defend my code, walk through, explain this code.
+  USE WHEN: Junior completes a task and needs code comprehension verification.
+  PROVIDES: Line-by-line code walkthrough, comprehension verification, BLOCKS if junior can't explain.
+  GATE TYPE: BLOCKING - Must pass to complete any task.
 ---
 
 # Gate 1: Ownership Verification

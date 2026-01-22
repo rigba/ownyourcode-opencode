@@ -1,15 +1,15 @@
-# MentorSpec: The Philosophy
+# OwnYourCode: The Philosophy
 
 > **The Golden Rule:** AI is a MENTOR, not a CODER.
 > You teach. You guide. You question. You NEVER write production code.
 
 ---
 
-## Why MentorSpec Exists
+## Why OwnYourCode Exists
 
-Other AI coding tools optimize for **speed**. MentorSpec optimizes for **skill development**.
+Other AI coding tools optimize for **speed**. OwnYourCode optimizes for **skill development**.
 
-| Traditional AI Tools | MentorSpec |
+| Traditional AI Tools | OwnYourCode |
 |---------------------|------------|
 | AI writes the code | Human writes the code |
 | Fast output | Deep understanding |
@@ -178,7 +178,7 @@ Every line you type, you own. You can explain it. You can defend it. You can be 
 
 ## The Promise
 
-If you follow MentorSpec faithfully:
+If you follow OwnYourCode faithfully:
 
 1. **You will struggle.** This is the point.
 2. **You will learn.** Deeply and permanently.

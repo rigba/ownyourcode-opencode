@@ -1,6 +1,11 @@
 ---
-name: Error Handling Gate
-description: Verify errors are handled gracefully with meaningful user feedback. Issues result in WARNINGS.
+name: error-handling-gate
+description: |
+  TRIGGERS: "error handling check", "what if this fails?", "ready to merge",
+  error verification, failure handling, graceful degradation, user feedback review.
+  USE WHEN: Code is ready to merge and needs error handling verification.
+  PROVIDES: Empty catch detection, user message review, logging verification.
+  GATE TYPE: WARNING - Recommends proper error handling before merge.
 ---
 
 # Gate 3: Error Handling Review

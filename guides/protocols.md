@@ -1,4 +1,4 @@
-# MentorSpec Protocols
+# OwnYourCode Protocols
 
 Quick reference for the core protocols that guide all mentorship.
 

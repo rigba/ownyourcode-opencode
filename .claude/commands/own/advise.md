@@ -4,7 +4,7 @@ description: Pre-work command that queries past learnings and leverages MCPs bef
 allowed-tools: Read, Glob, Grep, AskUserQuestion, mcp__context7__resolve-library-id, mcp__context7__get-library-docs, mcp__octocode__githubSearchCode, mcp__octocode__githubGetFileContent, mcp__octocode__githubViewRepoStructure, mcp__octocode__githubSearchRepositories
 ---
 
-# /mentor-spec:advise
+# /own:advise
 
 Query past learnings and leverage research tools before starting a new task.
 
@@ -48,14 +48,16 @@ Follow-up:
 
 ---
 
-### Phase 2: Query Learning Registry
+### Phase 2: Query Global Learning Registry
 
-Read `learning/LEARNING_REGISTRY.md` and search for:
+Read the **global** learning registry at `~/ownyourcode/learning/LEARNING_REGISTRY.md` and search for:
 - Patterns matching the domain
 - Failures matching the domain
 - Recent learnings that might apply
 
-Also check `.claude/skills/learned/` for any generated skill files in the domain.
+Also check `~/ownyourcode/learning/patterns/` for any documented patterns in the domain.
+
+**Important:** Learning is GLOBAL, not project-specific. This ensures learnings persist across all your projects.
 
 ---
 
@@ -72,13 +74,13 @@ If past learnings found:
 │ ─────────────────────────               │
 │ • [Pattern Name] (2026-01-15)          │
 │   "[Summary of what worked]"            │
-│   Location: .claude/skills/learned/...  │
+│   Location: ~/ownyourcode/learning/...  │
 │                                         │
 │ ⚠️ FAILURES TO AVOID                   │
 │ ─────────────────────────               │
 │ • [Issue Name] (2026-01-01)            │
 │   "[What went wrong and why]"           │
-│   Location: learning/failures/...       │
+│   Location: ~/ownyourcode/learning/...  │
 │                                         │
 │ 💡 INSIGHTS                             │
 │ ─────────────────────────               │
@@ -251,9 +253,9 @@ This forces thinking before typing.
 │                                         │
 │ ✅ You're prepared. Go build!           │
 │                                         │
-│ When stuck: /mentor-spec:stuck          │
-│ Need guidance: /mentor-spec:guide       │
-│ When done: /mentor-spec:done            │
+│ When stuck: /own:stuck          │
+│ Need guidance: /own:guide       │
+│ When done: /own:done            │
 └─────────────────────────────────────────┘
 ```
 
@@ -298,10 +300,11 @@ This forces thinking before typing.
 ```
 /advise → Work → /done → /retrospective
     ↑                          │
-    └──── Learning Registry ←──┘
+    └──── Global Registry  ←───┘
+          ~/ownyourcode/learning/
            + MCP Research
 ```
 
-Every /retrospective adds to your registry.
+Every /retrospective adds to your global registry.
 Every /advise queries that growing knowledge base PLUS live research.
-Over time, you build a personal playbook backed by real-world patterns.
+Over time, you build a personal playbook that persists across ALL your projects.

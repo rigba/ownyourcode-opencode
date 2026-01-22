@@ -4,7 +4,7 @@ description: Guide the junior through writing documentation for their project or
 allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, mcp__context7__resolve-library-id, mcp__context7__get-library-docs, mcp__octocode__githubSearchCode, mcp__octocode__githubGetFileContent
 ---
 
-# /mentor-spec:docs
+# /own:docs
 
 Guide the junior through writing documentation. **They write the docs, you guide the structure.**
 
@@ -264,7 +264,7 @@ Watch for and call out:
 ## Example Session
 
 ```
-User: /mentor-spec:docs
+User: /own:docs
 
 Mentor: "What do you need to document?"
 

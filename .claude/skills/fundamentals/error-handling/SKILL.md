@@ -1,6 +1,13 @@
 ---
-name: Error Handling Fundamentals
-description: Auto-invoke when reviewing try/catch blocks, API error responses, async operations, or user feedback patterns. Enforces graceful degradation and meaningful error messages.
+name: error-handling-fundamentals
+description: |
+  TRIGGERS: "how should I handle errors?", "what if this fails?", "error handling",
+  "calling API", "async operation", "try catch", "handling failure", "fetch request",
+  "making request", "promise", "await", "network call", "external service",
+  try/catch, error responses, async errors, exceptions, fallbacks, user feedback, logging.
+  USE WHEN: Junior is BUILDING async operations, API calls, or any code that can fail.
+  PROVIDES: Error handling patterns, graceful degradation, user-friendly messages, logging strategy.
+  PROACTIVE: Triggers when junior mentions building features that involve async or external calls.
 ---
 
 # Error Handling Fundamentals Review

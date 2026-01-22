@@ -4,7 +4,7 @@ description: Create a feature specification using spec-driven development
 allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, mcp__context7__resolve-library-id, mcp__context7__get-library-docs, mcp__octocode__githubSearchCode, mcp__octocode__githubGetFileContent, mcp__octocode__githubSearchRepositories
 ---
 
-# /mentor-spec:feature
+# /own:feature
 
 Create a feature specification using **Spec-Driven Development (SDD)**.
 
@@ -17,9 +17,9 @@ This command follows the SDD workflow:
 4. **Then** implementation begins with mentorship
 
 **Output:**
-- `mentorspec/specs/active/[feature-name]/spec.md` — Feature specification
-- `mentorspec/specs/active/[feature-name]/design.md` — Technical design
-- `mentorspec/specs/active/[feature-name]/tasks.md` — Phased implementation checklist
+- `ownyourcode/specs/active/[feature-name]/spec.md` — Feature specification
+- `ownyourcode/specs/active/[feature-name]/design.md` — Technical design
+- `ownyourcode/specs/active/[feature-name]/tasks.md` — Phased implementation checklist
 
 ---
 
@@ -27,7 +27,7 @@ This command follows the SDD workflow:
 
 > "Spec first, code second. But YOU write the code."
 
-Unlike other SDD tools where AI writes code, MentorSpec uses SDD for PLANNING only.
+Unlike other SDD tools where AI writes code, OwnYourCode uses SDD for PLANNING only.
 The implementation phase is where the junior learns by doing.
 
 ---
@@ -53,11 +53,11 @@ Push back ONLY if they skip the 'so that' part — that's the value.
 
 ---
 
-### Phase 2: MCP-Powered Research
+### Phase 2: MCP-Powered Research (MANDATORY: Use BOTH)
 
-Before generating specs, gather intelligence:
+Before generating specs, gather intelligence using **BOTH** MCPs. Never rely on just one source.
 
-#### Context7 — Official Documentation
+#### Context7 — Official Documentation (ALWAYS USE)
 Fetch latest docs for relevant libraries:
 ```
 Use mcp__context7__get-library-docs for:
@@ -65,9 +65,10 @@ Use mcp__context7__get-library-docs for:
 - Authentication (if auth feature)
 - Data fetching (if API feature)
 - State management patterns
+- Latest API patterns and version-specific features
 ```
 
-#### Octocode — Production Implementations
+#### Octocode — Production Implementations (ALWAYS USE)
 Search GitHub for how real apps implement similar features:
 ```
 Use mcp__octocode__githubSearchCode to find:
@@ -80,6 +81,8 @@ Example: For "login form", search:
 - "authentication flow next.js"
 - "form validation typescript"
 ```
+
+**BOTH sources are required.** If you only use one, research is incomplete.
 
 Present research findings:
 ```
@@ -95,11 +98,57 @@ Present research findings:
 
 ---
 
+### Phase 2.5: Internal Skill Mapping (DO NOT SHOW TO JUNIOR)
+
+Based on the feature type, internally note which skills apply. These skills are used **during planning** (to shape the spec) AND **during review** (to check the code) — never mentioned to the junior.
+
+**Available Skills:**
+frontend, backend, database, security, performance, error-handling, engineering, testing, seo, accessibility, documentation, debugging
+
+| Feature Type | Skills to Apply Silently |
+|--------------|--------------------------|
+| Frontend UI | frontend, accessibility, seo (if public-facing), testing |
+| Backend API | backend, security, error-handling, performance, testing |
+| Forms | frontend, accessibility, security, error-handling, testing |
+| Database operations | backend, database, security, performance, testing |
+| Full-stack feature | frontend, backend, security, error-handling, testing |
+| Any code | engineering, testing, documentation |
+
+**How skills shape the spec:**
+- **frontend skill** → Component structure, state management patterns
+- **backend skill** → API design, request/response handling, middleware
+- **accessibility skill** → Add edge cases for keyboard navigation, screen readers
+- **security skill** → Add input validation, auth checks to design.md
+- **error-handling skill** → Pre-populate error scenarios in edge cases
+- **seo skill** → Include semantic HTML requirements in design.md
+- **performance skill** → Add performance considerations to design.md
+- **testing skill** → Include "what tests to write" in tasks.md
+
+**How skills shape code review:**
+- During `/own:done`, apply skill checklists naturally
+- Never say "according to the accessibility skill" — just give the guidance
+
+Example internal note (not shown to junior):
+```
+Feature: Login Form
+Applicable skills: frontend, backend, security, accessibility, error-handling, testing
+
+Spec impact:
+- Frontend: Component structure, form state management
+- Backend: Auth endpoint design, session handling
+- Security: CSRF protection, rate limiting, password hashing
+- Accessibility: Screen reader announces errors, keyboard-only login
+- Error-handling: Network failures, validation errors, auth failures
+- Testing: Unit tests for validation, integration tests for auth flow
+```
+
+---
+
 ### Phase 3: AI Generates Specs (The SDD Part)
 
 **Read the project context:**
-1. Check `mentorspec/product/mission.md` for project goals
-2. Check `mentorspec/product/stack.md` for technology constraints
+1. Check `ownyourcode/product/mission.md` for project goals
+2. Check `ownyourcode/product/stack.md` for technology constraints
 3. Scan existing code structure to understand patterns
 
 **Generate all three files based on:**
@@ -144,8 +193,8 @@ Please review these specs. You should:
 4. REMOVE anything out of scope
 
 When ready:
-- Run /mentor-spec:advise to prepare for implementation
-- Then /mentor-spec:guide to start Phase 1
+- Run /own:advise to prepare for implementation
+- Then /own:guide to start Phase 1
 ```
 
 ---
@@ -185,7 +234,7 @@ Based on response:
 ```markdown
 # Feature: [Feature Name]
 
-> Generated by MentorSpec. Review and modify as needed.
+> Generated by OwnYourCode. Review and modify as needed.
 
 ## User Story
 
@@ -239,7 +288,7 @@ Before starting:
 ```markdown
 # Technical Design: [Feature Name]
 
-> Generated by MentorSpec based on your stack, official docs, and production patterns.
+> Generated by OwnYourCode based on your stack, official docs, and production patterns.
 
 ## Overview
 
@@ -307,7 +356,7 @@ Based on Context7 and Octocode research:
 
 - [ ] Read and understand spec.md
 - [ ] Read and understand design.md
-- [ ] Run /mentor-spec:advise for pre-work preparation
+- [ ] Run /own:advise for pre-work preparation
 - [ ] Check that dependencies are met
 - [ ] Ask mentor if anything is unclear
 
@@ -367,8 +416,8 @@ Based on Context7 and Octocode research:
 ## Completion
 
 - [ ] Self-review: Does it match the spec?
-- [ ] Run /mentor-spec:done for 5 Gates + code review + STAR story
-- [ ] Run /mentor-spec:retrospective to capture learnings
+- [ ] Run /own:done for 5 Gates + code review + STAR story
+- [ ] Run /own:retro to capture learnings
 
 ## Progress Tracking
 

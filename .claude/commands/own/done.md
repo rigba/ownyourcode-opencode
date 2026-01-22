@@ -4,7 +4,7 @@ description: Complete a task with 5 Gates verification, code review, and career 
 allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, Bash
 ---
 
-# /mentor-spec:done
+# /own:done
 
 Complete a task with gate checks, senior-level code review, and career value extraction.
 
@@ -41,7 +41,7 @@ Options:
 ```
 
 If from active spec, read the spec to understand context:
-- Check `mentorspec/specs/active/*/tasks.md`
+- Check `ownyourcode/specs/active/*/tasks.md`
 - Find the relevant task
 - Note what they were building and why
 
@@ -272,21 +272,39 @@ Use severity levels:
 
 ---
 
-### Phase 4: Task Update
+### Phase 4: Task & Spec Update
 
-Update the spec files:
+#### 4a. Update Task Files
 
 1. Mark task as complete in `tasks.md`
 2. Update status from "In Progress" to "Complete"
-3. Note completion date
+3. Add completion timestamp
 
-If all tasks complete, move spec to `completed/`:
+#### 4b. Spec Archival (MANDATORY when all tasks complete)
 
-```bash
-mv mentorspec/specs/active/[feature]/ mentorspec/specs/completed/
-```
+If ALL tasks in the feature are complete:
 
-Update `roadmap.md` with progress.
+1. Add completion metadata to spec.md header:
+   ```markdown
+   ---
+   status: completed
+   completed_at: [ISO date]
+   ---
+   ```
+
+2. **Move the entire spec folder to completed:**
+   ```bash
+   mv ownyourcode/specs/active/[feature]/ ownyourcode/specs/completed/
+   ```
+
+3. Confirm to the junior:
+   ```
+   ✅ Spec archived to completed/[feature]/
+   ```
+
+4. Update `roadmap.md` with progress
+
+**Important:** Always move completed specs. The `active/` folder should only contain work in progress.
 
 ---
 
@@ -323,7 +341,7 @@ Guide them through:
 
 > "What was the **Result**? What outcome did your work produce?"
 
-Save the story to `mentorspec/career/stories/[date]-[feature].md`
+Save the story to `ownyourcode/career/stories/[date]-[feature].md`
 
 ---
 
@@ -439,8 +457,8 @@ After completing all phases:
 
 Next steps:
 - Run /retrospective to document learnings
-- Run /mentor-spec:status to see roadmap progress
-- Run /mentor-spec:feature to start next feature
+- Run /own:status to see roadmap progress
+- Run /own:feature to start next feature
 ```
 
 ---

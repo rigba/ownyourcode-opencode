@@ -1,6 +1,11 @@
 ---
-name: Security Gate
-description: Verify security considerations were addressed before shipping. Issues result in WARNINGS that strongly recommend fixing.
+name: security-gate
+description: |
+  TRIGGERS: "ready to ship", "before deploy", "final security check", "pre-merge review",
+  security verification, OWASP check, vulnerability scan, auth review.
+  USE WHEN: Code is ready to merge/deploy and needs security verification.
+  PROVIDES: OWASP Top 10 verification, input validation check, auth flow review.
+  GATE TYPE: WARNING - Strongly recommends fixing before merge.
 ---
 
 # Gate 2: Security Review

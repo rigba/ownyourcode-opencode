@@ -64,7 +64,7 @@ You should see `context7` listed as an available MCP server.
 
 ---
 
-## How It Works in MentorSpec
+## How It Works in OwnYourCode
 
 When you're working on a feature and need guidance, your mentor will:
 

@@ -1,6 +1,11 @@
 ---
-name: Fundamentals Gate
-description: Verify code quality standards are met - naming, structure, DRY principles. Issues result in SUGGESTIONS for improvement.
+name: fundamentals-gate
+description: |
+  TRIGGERS: "code quality check", "is this clean enough?", "ready for review",
+  code quality verification, naming check, DRY check, structure review.
+  USE WHEN: Code is ready for review and needs quality verification.
+  PROVIDES: Naming convention check, function size review, DRY verification.
+  GATE TYPE: SUGGESTION - Offers improvements but doesn't block.
 ---
 
 # Gate 5: Fundamentals Review

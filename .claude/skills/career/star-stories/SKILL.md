@@ -1,6 +1,10 @@
 ---
-name: STAR Story Extraction
-description: Auto-invoke after task completion to extract interview-ready STAR stories from completed work.
+name: star-story-extraction
+description: |
+  TRIGGERS: "interview prep", "STAR story", "behavioral interview", "how do I talk about this?",
+  interview stories, situation task action result, tell me about a time, problem solving story.
+  USE WHEN: Completing significant tasks, preparing for interviews, documenting achievements.
+  PROVIDES: STAR format stories, interview-ready narratives, behavioral interview preparation.
 ---
 
 # STAR Story Extraction
@@ -189,7 +193,7 @@ Guide the junior with these:
 
 Stories are saved to:
 ```
-mentorspec/career/stories/[date]-[feature-name].md
+ownyourcode/career/stories/[date]-[feature-name].md
 ```
 
-Example: `mentorspec/career/stories/2026-01-15-jwt-auth.md`
+Example: `ownyourcode/career/stories/2026-01-15-jwt-auth.md`

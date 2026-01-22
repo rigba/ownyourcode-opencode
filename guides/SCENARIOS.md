@@ -1,7 +1,7 @@
-# MentorSpec Validation Scenarios
+# OwnYourCode Validation Scenarios
 
-> 10 scenarios to test that MentorSpec is working correctly.
-> Use these after installing MentorSpec on a new project.
+> 10 scenarios to test that OwnYourCode is working correctly.
+> Use these after installing OwnYourCode on a new project.
 
 ---
 
@@ -47,7 +47,7 @@ You: "How do I use useState with arrays?"
 
 ```
 You: *Copy-paste some code from Stack Overflow*
-You: "/mentor-spec:done"
+You: "/own:done"
 ```
 
 **Expected:** At Gate 1 (Ownership), the mentor should ask:
@@ -84,11 +84,11 @@ You: "I'm getting 'Cannot read properties of undefined'"
 
 ```
 # First, complete a task with a lesson learned
-You: "/mentor-spec:retrospective"
+You: "/own:retro"
    → Document: "Arrays must be initialized as [] not undefined"
 
 # Later, start similar work
-You: "/mentor-spec:advise"
+You: "/own:advise"
    → "I'm about to work on a component that maps over data"
 ```
 
@@ -111,7 +111,7 @@ You: *Write code that does:*
    - No input validation
    - Password stored in localStorage
 
-You: "/mentor-spec:done"
+You: "/own:done"
 ```
 
 **Expected:** At Gate 2 (Security), the mentor should:
@@ -129,7 +129,7 @@ You: "/mentor-spec:done"
 
 ```
 You: *Complete a feature (JWT authentication)*
-You: "/mentor-spec:done"
+You: "/own:done"
 ```
 
 **Expected:** After passing gates, the mentor should help create:
@@ -168,7 +168,7 @@ You: *Write code that:*
    - Makes an API call inside a .map()
    - Re-renders entire list on every keystroke
 
-You: "/mentor-spec:done"
+You: "/own:done"
 ```
 
 **Expected:** At Gate 4 (Performance), the mentor should:
@@ -185,7 +185,7 @@ You: "/mentor-spec:done"
 **Test:** Does `/feature` generate specs for junior review?
 
 ```
-You: "/mentor-spec:feature"
+You: "/own:feature"
    → "Login form with email/password validation"
 ```
 
@@ -225,18 +225,18 @@ After installation, run through these:
 **Mentor is too lenient:**
 - Check that CLAUDE.md was properly installed in `.claude/`
 - Verify the Anti-Brain-Rot Rules are present
-- Run `cat .claude/CLAUDE.md | grep "MENTORSPEC"` to confirm
+- Run `cat .claude/CLAUDE.md | grep "OWNYOURCODE"` to confirm
 
 **Commands not working:**
-- Ensure commands are in `.claude/commands/mentor-spec/`
-- Try `/mentor-spec:status` first
+- Ensure commands are in `.claude/commands/ownyourcode/`
+- Try `/own:status` first
 - Check Claude Code is running in the project directory
 
 **Learning Flywheel not working:**
 - Verify `learning/LEARNING_REGISTRY.md` exists
-- Run `/mentor-spec:retrospective` at least once
+- Run `/own:retro` at least once
 - Check `.claude/skills/learned/` for auto-generated skills
 
 ---
 
-*If MentorSpec passes these 10 scenarios, it's working correctly.*
+*If OwnYourCode passes these 10 scenarios, it's working correctly.*

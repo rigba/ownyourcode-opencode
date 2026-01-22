@@ -1,10 +1,10 @@
 ---
-name: retrospective
+name: retro
 description: Post-work command that extracts learnings and updates the learning registry
 allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, mcp__octocode__githubSearchCode, mcp__octocode__githubGetFileContent
 ---
 
-# /mentor-spec:retrospective
+# /own:retro
 
 Extract learnings from completed work and persist them for future reference.
 
@@ -102,9 +102,11 @@ Based on their answers, categorize:
 
 ### Phase 4: Generate Learning Artifacts
 
+**All learnings are stored GLOBALLY at `~/ownyourcode/learning/` to persist across projects.**
+
 #### For Significant Patterns
 
-Create a skill file at `.claude/skills/learned/[PatternName]/SKILL.md`:
+Create a pattern file at `~/ownyourcode/learning/patterns/[PatternName].md`:
 
 ```markdown
 ---
@@ -141,7 +143,7 @@ description: [When to use this pattern]
 
 #### For Significant Failures
 
-Create a failure doc at `learning/failures/FAILURE_[Topic].md`:
+Create a failure doc at `~/ownyourcode/learning/failures/[Topic].md`:
 
 ```markdown
 # FAILURE: [Short Description]
@@ -173,9 +175,9 @@ Create a failure doc at `learning/failures/FAILURE_[Topic].md`:
 
 ---
 
-### Phase 5: Update Learning Registry
+### Phase 5: Update Global Learning Registry
 
-Append to `learning/LEARNING_REGISTRY.md`:
+Append to `~/ownyourcode/learning/LEARNING_REGISTRY.md`:
 
 ```markdown
 ### 2026-01-01: [Title]
@@ -235,9 +237,9 @@ Based on accumulated learnings, assess growth:
 │ ⚠️ Failure: [Name] → documented         │
 │ 💡 Insight: "[Key insight]"             │
 │                                         │
-│ REGISTRY UPDATED                        │
+│ GLOBAL REGISTRY UPDATED                 │
 │ ─────────────────                       │
-│ learning/LEARNING_REGISTRY.md           │
+│ ~/ownyourcode/learning/LEARNING_REGISTRY│
 │                                         │
 │ NEXT TIME                               │
 │ ─────────────────                       │
@@ -247,9 +249,9 @@ Based on accumulated learnings, assess growth:
 └─────────────────────────────────────────┘
 
 What's next?
-- /mentor-spec:status — see your progress
-- /mentor-spec:feature — start new feature
-- /mentor-spec:advise — prepare for next task
+- /own:status — see your progress
+- /own:feature — start new feature
+- /own:advise — prepare for next task
 ```
 
 ---
@@ -259,8 +261,9 @@ What's next?
 1. **Failures are gold** — Document them shamelessly, they're the best teachers
 2. **Be specific** — Vague learnings aren't useful later
 3. **One pattern at a time** — Don't force it; quality over quantity
-4. **Registry compounds** — Every entry makes /advise smarter
-5. **Review periodically** — Skim your registry monthly
+4. **Registry is GLOBAL** — Learnings persist across ALL your projects at `~/ownyourcode/learning/`
+5. **Registry compounds** — Every entry makes /advise smarter
+6. **Review periodically** — Skim your registry monthly
 
 ---
 
@@ -292,8 +295,8 @@ What's next?
                            │
                            ▼
               ┌────────────────────────┐
-              │   LEARNING REGISTRY    │
-              │ + GENERATED SKILLS     │
+              │   GLOBAL REGISTRY      │
+              │ ~/ownyourcode/learning │
               └────────────┬───────────┘
                            │
                            └──────────────┐

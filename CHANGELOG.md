@@ -1,6 +1,56 @@
 # Changelog
 
-All notable changes to MentorSpec will be documented in this file.
+All notable changes to OwnYourCode will be documented in this file.
+
+---
+
+## [2.1.0] - 2026-01-06
+
+### The "Global Learning + Silent Skills" Release
+
+Quality improvements based on real-world testing. Learnings now persist across projects, skills apply silently, and research is always verified.
+
+### Added
+
+#### Global Learning Registry
+- Learning persists across ALL projects at `~/ownyourcode/learning/`
+- Patterns and failures compound across your entire engineering journey
+- `/advise` queries global registry + MCP research
+- `/retrospective` writes to global registry
+
+#### Package Manager Education
+- `/init` now detects and teaches about npm, pnpm, bun, and yarn
+- Fresh projects ask which package manager to use
+- Existing projects detect from lock files and provide education
+
+#### Version Intelligence
+- Always verify latest package versions via Context7 + OctoCode before recommending
+- Document versions in `stack.md`
+- Warn about outdated dependencies
+
+#### Silent Skill Activation
+- Skills shape specs during `/feature` planning
+- Skills shape code review during `/done`
+- Junior never sees skill names — just receives quality guidance naturally
+
+#### Dual MCP Research Protocol
+- BOTH Context7 AND OctoCode are mandatory for any technical research
+- "According to the React 19 docs [Context7]... Looking at production [OctoCode]..."
+
+### Changed
+
+- Spec archival now automatic — completed specs move to `completed/` after `/done`
+- Task tracking now real-time — tasks marked complete during work, not just at end
+- Learning paths changed from project-local to global (`~/ownyourcode/learning/`)
+- Install scripts updated for v2.1 features
+
+### Technical
+
+- `base-install.sh` creates global learning structure
+- `project-install.sh` no longer creates local learning directories
+- CLAUDE.md.template has 5 new mandatory rules
+- feature.md has internal skill mapping (Phase 2.5)
+- init.md has package manager detection and version verification
 
 ---
 
@@ -8,7 +58,7 @@ All notable changes to MentorSpec will be documented in this file.
 
 ### The "Learning Flywheel" Release
 
-Major overhaul transforming MentorSpec from a strict mentor into a complete learning system that compounds growth over time.
+Major overhaul transforming OwnYourCode from a strict mentor into a complete learning system that compounds growth over time.
 
 ### Added
 
@@ -36,8 +86,8 @@ Your learnings compound across sessions:
 - **Documentation** - WHY not WHAT, README structure, JSDoc
 
 #### 2 New Commands
-- `/mentor-spec:test` - Guide through writing tests (junior writes, AI guides)
-- `/mentor-spec:docs` - Guide through writing documentation
+- `/own:test` - Guide through writing tests (junior writes, AI guides)
+- `/own:docs` - Guide through writing documentation
 
 #### Resistance Protocol
 Enforced pushback when juniors try to shortcut:
@@ -75,7 +125,7 @@ Required for full functionality:
 
 ### Initial Release
 
-The original MentorSpec with:
+The original OwnYourCode with:
 - 8 slash commands
 - 7 fundamental skills
 - 5 mentorship gates
@@ -89,6 +139,6 @@ The original MentorSpec with:
 
 > "If you took away the AI tomorrow, could this junior still code?"
 >
-> MentorSpec makes the answer: **YES**.
+> OwnYourCode makes the answer: **YES**.
 
 The goal is not to ship code. The goal is to build the engineer.

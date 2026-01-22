@@ -31,7 +31,7 @@ Track your growth over time:
 
 | Week | Level | Evidence |
 |------|-------|----------|
-| Start | ⭐ (learning) | Beginning MentorSpec journey |
+| Start | ⭐ (learning) | Beginning OwnYourCode journey |
 
 ---
 

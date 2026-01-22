@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# MentorSpec Project Installation Script
+# OwnYourCode Project Installation Script
 # AI-Mentored Development for Juniors
-# Version 2.0 - Skill-Driven SDD Engine
+# Version 2.1 - Global Learning + Silent Skills
 
 set -e
 
@@ -14,7 +14,7 @@ BLUE='\033[0;34m'
 NC='\033[0m'
 
 # Paths
-BASE_DIR="$HOME/mentor-spec"
+BASE_DIR="$HOME/ownyourcode"
 PROJECT_DIR=$(pwd)
 PROJECT_NAME=$(basename "$PROJECT_DIR")
 
@@ -27,25 +27,25 @@ error() { echo -e "${RED}[ERROR]${NC} $1"; exit 1; }
 # Header
 echo ""
 echo -e "${GREEN}╔═══════════════════════════════════════════════════════════╗${NC}"
-echo -e "${GREEN}║              MentorSpec Installation v2.0                 ║${NC}"
+echo -e "${GREEN}║              OwnYourCode Installation v2.1                 ║${NC}"
 echo -e "${GREEN}║       AI-Mentored Spec-Driven Development Engine          ║${NC}"
 echo -e "${GREEN}╚═══════════════════════════════════════════════════════════╝${NC}"
 echo ""
 
 # Check base exists
 if [ ! -d "$BASE_DIR" ]; then
-    error "MentorSpec base not found at $BASE_DIR. Run the base installer first."
+    error "OwnYourCode base not found at $BASE_DIR. Run the base installer first."
 fi
 
-info "Installing MentorSpec into: $PROJECT_DIR"
+info "Installing OwnYourCode into: $PROJECT_DIR"
 echo ""
 
 # ============================================================================
 # STEP 1: Handle existing installation
 # ============================================================================
 
-if [ -d "$PROJECT_DIR/mentorspec" ]; then
-    warn "MentorSpec already installed in this project."
+if [ -d "$PROJECT_DIR/ownyourcode" ]; then
+    warn "OwnYourCode already installed in this project."
     read -p "Reinstall? (y/N): " confirm
     if [ "$confirm" != "y" ] && [ "$confirm" != "Y" ]; then
         info "Cancelled."
@@ -60,15 +60,15 @@ fi
 
 info "Creating directories..."
 
-# MentorSpec project directories
-mkdir -p "$PROJECT_DIR/mentorspec/product"
-mkdir -p "$PROJECT_DIR/mentorspec/specs/active"
-mkdir -p "$PROJECT_DIR/mentorspec/specs/completed"
-mkdir -p "$PROJECT_DIR/mentorspec/career/stories"
-mkdir -p "$PROJECT_DIR/mentorspec/guides"
+# OwnYourCode project directories
+mkdir -p "$PROJECT_DIR/ownyourcode/product"
+mkdir -p "$PROJECT_DIR/ownyourcode/specs/active"
+mkdir -p "$PROJECT_DIR/ownyourcode/specs/completed"
+mkdir -p "$PROJECT_DIR/ownyourcode/career/stories"
+mkdir -p "$PROJECT_DIR/ownyourcode/guides"
 
 # Claude Code directories (v2.0 - Skill-Driven)
-mkdir -p "$PROJECT_DIR/.claude/commands/mentor-spec"
+mkdir -p "$PROJECT_DIR/.claude/commands/own"
 mkdir -p "$PROJECT_DIR/.claude/skills/fundamentals/frontend"
 mkdir -p "$PROJECT_DIR/.claude/skills/fundamentals/backend"
 mkdir -p "$PROJECT_DIR/.claude/skills/fundamentals/security"
@@ -90,9 +90,7 @@ mkdir -p "$PROJECT_DIR/.claude/skills/career/star-stories"
 mkdir -p "$PROJECT_DIR/.claude/skills/career/resume-bullets"
 mkdir -p "$PROJECT_DIR/.claude/skills/learned"
 
-# Learning Flywheel directories
-mkdir -p "$PROJECT_DIR/learning/patterns"
-mkdir -p "$PROJECT_DIR/learning/failures"
+# Note: Learning is GLOBAL at ~/ownyourcode/learning/ (not project-local)
 
 success "Directories created"
 
@@ -106,33 +104,33 @@ TEMPLATE="$BASE_DIR/core/CLAUDE.md.template"
 info "Configuring CLAUDE.md..."
 
 if [ -f "$CLAUDE_MD" ]; then
-    # Check if MentorSpec already installed
-    if grep -q "MENTORSPEC:" "$CLAUDE_MD" 2>/dev/null; then
-        warn "MentorSpec section already exists in CLAUDE.md"
-        read -p "Replace existing MentorSpec section? (y/N): " replace
+    # Check if OwnYourCode already installed
+    if grep -q "OWNYOURCODE:" "$CLAUDE_MD" 2>/dev/null; then
+        warn "OwnYourCode section already exists in CLAUDE.md"
+        read -p "Replace existing OwnYourCode section? (y/N): " replace
         if [ "$replace" = "y" ] || [ "$replace" = "Y" ]; then
-            # Remove existing MentorSpec section
-            sed -i.bak '/# ═.*MENTORSPEC/,/# ═.*END MENTORSPEC/d' "$CLAUDE_MD"
+            # Remove existing OwnYourCode section
+            sed -i.bak '/# ═.*OWNYOURCODE/,/# ═.*END OWNYOURCODE/d' "$CLAUDE_MD"
             # Append fresh template
             echo "" >> "$CLAUDE_MD"
             cat "$TEMPLATE" >> "$CLAUDE_MD"
-            success "MentorSpec section replaced"
+            success "OwnYourCode section replaced"
         else
-            info "Keeping existing MentorSpec section"
+            info "Keeping existing OwnYourCode section"
         fi
     else
-        # Existing CLAUDE.md without MentorSpec - Smart merge
+        # Existing CLAUDE.md without OwnYourCode - Smart merge
         info "Found existing CLAUDE.md - merging..."
 
         # Backup original
-        cp "$CLAUDE_MD" "$PROJECT_DIR/.claude/CLAUDE.md.pre-mentorspec"
-        success "Backed up to CLAUDE.md.pre-mentorspec"
+        cp "$CLAUDE_MD" "$PROJECT_DIR/.claude/CLAUDE.md.pre-ownyourcode"
+        success "Backed up to CLAUDE.md.pre-ownyourcode"
 
-        # Append MentorSpec section
+        # Append OwnYourCode section
         echo "" >> "$CLAUDE_MD"
         echo "" >> "$CLAUDE_MD"
         cat "$TEMPLATE" >> "$CLAUDE_MD"
-        success "MentorSpec section merged into CLAUDE.md"
+        success "OwnYourCode section merged into CLAUDE.md"
     fi
 else
     # No existing CLAUDE.md - create fresh
@@ -147,8 +145,8 @@ fi
 
 info "Installing commands..."
 
-# Copy commands from .claude/commands/mentor-spec/
-cp "$BASE_DIR/.claude/commands/mentor-spec/"*.md "$PROJECT_DIR/.claude/commands/mentor-spec/" 2>/dev/null || true
+# Copy commands from .claude/commands/own/
+cp "$BASE_DIR/.claude/commands/own/"*.md "$PROJECT_DIR/.claude/commands/own/" 2>/dev/null || true
 success "Commands installed (10 commands including test/docs)"
 
 # ============================================================================
@@ -194,58 +192,18 @@ fi
 echo "# Auto-generated skills go here (from /retrospective)" > "$PROJECT_DIR/.claude/skills/learned/.gitkeep"
 
 # ============================================================================
-# STEP 6: Create Learning Registry (NEW in v2.0)
+# STEP 6: Learning Registry Note (v2.1 - Global Learning)
 # ============================================================================
 
-info "Creating Learning Registry..."
+info "Learning Registry..."
 
-if [ -f "$BASE_DIR/learning/LEARNING_REGISTRY.md" ]; then
-    cp "$BASE_DIR/learning/LEARNING_REGISTRY.md" "$PROJECT_DIR/learning/"
+# Learning is GLOBAL at ~/ownyourcode/learning/ (not project-local)
+# This ensures learnings persist across ALL projects
+if [ -d "$BASE_DIR/learning" ]; then
+    success "Using global registry at ~/ownyourcode/learning/"
 else
-    cat > "$PROJECT_DIR/learning/LEARNING_REGISTRY.md" << 'EOF'
-# Learning Registry
-
-> Automatically updated by `/retrospective`. Query with `/advise`.
-> This file tracks your growth as an engineer across all sessions.
-
----
-
-## Patterns (Reusable Solutions)
-
-Successful patterns you've discovered and can reuse:
-
-| Date | Domain | Pattern | Location |
-|------|--------|---------|----------|
-| | | *No patterns recorded yet* | |
-
----
-
-## Failures (Anti-Patterns)
-
-Mistakes you've made and learned from (the most valuable learnings):
-
-| Date | Domain | Issue | Location |
-|------|--------|-------|----------|
-| | | *No failures documented yet* | |
-
----
-
-## Competency Progression
-
-Track your growth over time:
-
-| Week | Level | Evidence |
-|------|-------|----------|
-| Start | ⭐ (learning) | Beginning MentorSpec journey |
-
----
-
-## Detailed Entries
-
-*Entries will be added here chronologically as you complete `/retrospective` sessions.*
-EOF
+    warn "Global learning registry not found. Run base-install.sh to create it."
 fi
-success "Learning Registry created"
 
 # ============================================================================
 # STEP 7: Copy guides
@@ -253,7 +211,7 @@ success "Learning Registry created"
 
 info "Copying guides..."
 
-cp "$BASE_DIR/guides/"*.md "$PROJECT_DIR/mentorspec/guides/" 2>/dev/null || true
+cp "$BASE_DIR/guides/"*.md "$PROJECT_DIR/ownyourcode/guides/" 2>/dev/null || true
 success "Guides copied"
 
 # ============================================================================
@@ -262,10 +220,10 @@ success "Guides copied"
 
 info "Creating product templates..."
 
-cat > "$PROJECT_DIR/mentorspec/product/mission.md" << 'EOF'
+cat > "$PROJECT_DIR/ownyourcode/product/mission.md" << 'EOF'
 # Project Mission
 
-> Run `/mentor-spec:init` to define your project vision.
+> Run `/own:init` to define your project vision.
 
 ## The Problem
 
@@ -280,10 +238,10 @@ cat > "$PROJECT_DIR/mentorspec/product/mission.md" << 'EOF'
 <!-- When is this project DONE? What must work? -->
 EOF
 
-cat > "$PROJECT_DIR/mentorspec/product/stack.md" << 'EOF'
+cat > "$PROJECT_DIR/ownyourcode/product/stack.md" << 'EOF'
 # Technology Stack
 
-> Run `/mentor-spec:init` to auto-detect and document your stack.
+> Run `/own:init` to auto-detect and document your stack.
 
 ## Frontend
 
@@ -298,10 +256,10 @@ cat > "$PROJECT_DIR/mentorspec/product/stack.md" << 'EOF'
 <!-- Document your reasoning -->
 EOF
 
-cat > "$PROJECT_DIR/mentorspec/product/roadmap.md" << 'EOF'
+cat > "$PROJECT_DIR/ownyourcode/product/roadmap.md" << 'EOF'
 # Project Roadmap
 
-> Run `/mentor-spec:init` to create your development roadmap.
+> Run `/own:init` to create your development roadmap.
 
 ## Phase 1: Foundation
 
@@ -327,16 +285,16 @@ success "Product templates created"
 
 echo ""
 echo -e "${GREEN}╔═══════════════════════════════════════════════════════════╗${NC}"
-echo -e "${GREEN}║            Installation Complete! v2.0                    ║${NC}"
+echo -e "${GREEN}║            Installation Complete! v2.1                    ║${NC}"
 echo -e "${GREEN}╚═══════════════════════════════════════════════════════════╝${NC}"
 echo ""
 
-success "MentorSpec v2.0 installed successfully!"
+success "OwnYourCode v2.1 installed successfully!"
 echo ""
 
 info "What was created:"
 echo ""
-echo "  📁 mentorspec/              — Your project docs (commit this)"
+echo "  📁 ownyourcode/              — Your project docs (commit this)"
 echo "     ├── product/             — Mission, stack, roadmap"
 echo "     ├── specs/               — Feature specifications"
 echo "     ├── career/              — Interview stories & bullets"
@@ -351,33 +309,39 @@ echo "         ├── gates/           — 6 Mentorship gates"
 echo "         ├── career/          — STAR & resume extraction"
 echo "         └── learned/         — Auto-generated from /retrospective"
 echo ""
-echo "  📁 learning/                — Learning Flywheel data"
-echo "     ├── LEARNING_REGISTRY.md — Your growth tracker"
+echo "  📁 ~/ownyourcode/learning/  — GLOBAL Learning Flywheel"
+echo "     ├── LEARNING_REGISTRY.md — Your growth tracker (all projects)"
 echo "     ├── patterns/            — Reusable solutions"
 echo "     └── failures/            — Documented anti-patterns"
 echo ""
 
-info "New in v2.0:"
-echo "  • 6 Mentorship Gates in /done command (including Testing)"
-echo "  • /test command (guide through writing tests)"
-echo "  • /docs command (guide through writing documentation)"
-echo "  • /advise command (pre-work intelligence)"
-echo "  • /retrospective command (learning capture)"
-echo "  • Learning Flywheel that grows with you"
+info "New in v2.1:"
+echo "  • GLOBAL learning registry (persists across all projects)"
+echo "  • Package manager education (npm, pnpm, bun, yarn)"
+echo "  • Version intelligence (always verify latest)"
+echo "  • Silent skill activation (quality without jargon)"
+echo "  • Dual MCP research (Context7 + OctoCode mandatory)"
+echo "  • Automatic spec archival on completion"
+echo "  • Real-time task tracking"
+echo ""
+info "From v2.0:"
+echo "  • 6 Mentorship Gates (including Testing)"
+echo "  • /test and /docs commands"
+echo "  • Learning Flywheel (/advise → /retrospective)"
 echo "  • MCP integration (Context7 + Octocode)"
 echo ""
 
 info "Next steps:"
 echo "  1. Open Claude Code in this project"
-echo "  2. Run: /mentor-spec:init"
-echo "  3. Before each task: /mentor-spec:advise"
-echo "  4. After each task: /mentor-spec:done → /mentor-spec:retrospective"
+echo "  2. Run: /own:init"
+echo "  3. Before each task: /own:advise"
+echo "  4. After each task: /own:done → /own:retrospective"
 echo ""
 
 info "MCP Setup (recommended):"
 echo "  claude mcp add --transport http context7 https://mcp.context7.com/mcp"
 echo ""
 
-info "To remove MentorSpec later:"
-echo "  ~/mentor-spec/scripts/project-uninstall.sh"
+info "To remove OwnYourCode later:"
+echo "  ~/ownyourcode/scripts/project-uninstall.sh"
 echo ""

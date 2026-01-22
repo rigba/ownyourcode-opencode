@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img width="717" height="114" alt="MentorSpec" src="https://github.com/user-attachments/assets/81bf37f6-d06a-4576-be3e-579e6bd30cd9" />
+  <img width="717" height="114" alt="OwnYourCode" src="https://github.com/user-attachments/assets/81bf37f6-d06a-4576-be3e-579e6bd30cd9" />
 </h1>
 
 <p align="center">
@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-2.0-blueviolet?style=for-the-badge" alt="Version 2.0">
+  <img src="https://img.shields.io/badge/version-2.1-blueviolet?style=for-the-badge" alt="Version 2.1">
   <a href="#-installation"><img src="https://img.shields.io/badge/install-curl%20%7C%20bash-brightgreen?style=for-the-badge" alt="Install"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=for-the-badge" alt="License"></a>
 </p>
@@ -31,16 +31,30 @@
 
 ---
 
-## What's New in v2.0
+## What's New in v2.1
 
-| Feature | Description |
-|---------|-------------|
-| **6 Mentorship Gates** | Mandatory quality checkpoints before completing any task |
-| **Learning Flywheel** | Your learnings compound across sessions |
-| **11 Auto-Invoke Skills** | Testing, SEO, Accessibility, Documentation + 7 more |
-| **10 Commands** | Added `/test` and `/docs` commands |
-| **Resistance Protocol** | Pushback when juniors try to shortcut the process |
-| **Career Extraction** | STAR stories + resume bullets from every task |
+| Feature                       | Description                                                          |
+| ----------------------------- | -------------------------------------------------------------------- |
+| **Global Learning Registry**  | Learnings persist across ALL projects at `~/ownyourcode/learning/`   |
+| **Package Manager Education** | Learn npm vs pnpm vs bun vs yarn during `/init`                      |
+| **Version Intelligence**      | Always verifies latest package versions via MCP before recommending  |
+| **Silent Skill Activation**   | Skills shape specs and reviews without jargon — quality just happens |
+| **Dual MCP Research**         | BOTH Context7 AND OctoCode are mandatory for research                |
+| **Automatic Spec Archival**   | Completed specs auto-move to `completed/`                            |
+| **Real-time Task Tracking**   | Tasks marked complete as you work, not just at `/done`               |
+
+---
+
+## From v2.0
+
+| Feature                   | Description                                              |
+| ------------------------- | -------------------------------------------------------- |
+| **6 Mentorship Gates**    | Mandatory quality checkpoints before completing any task |
+| **Learning Flywheel**     | Your learnings compound across sessions                  |
+| **11 Auto-Invoke Skills** | Testing, SEO, Accessibility, Documentation + 7 more      |
+| **10 Commands**           | Added `/test` and `/docs` commands                       |
+| **Resistance Protocol**   | Pushback when juniors try to shortcut the process        |
+| **Career Extraction**     | STAR stories + resume bullets from every task            |
 
 ---
 
@@ -88,10 +102,10 @@ Claude has a built-in "Learning" output style. **It's not enough.**
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                CLAUDE'S LEARNING MODE vs MENTORSPEC                      │
+│                CLAUDE'S LEARNING MODE vs OWNYOURCODE                      │
 ├─────────────────────────────────────────────────────────────────────────┤
 │                                                                          │
-│   LEARNING MODE                      MENTORSPEC                          │
+│   LEARNING MODE                      OWNYOURCODE                          │
 │   ─────────────                      ──────────                          │
 │                                                                          │
 │   ❌ A "preference" - suggestive     ✅ RULES - enforced strictly        │
@@ -118,7 +132,7 @@ Claude has a built-in "Learning" output style. **It's not enough.**
 └─────────────────────────────────────────────────────────────────────────┘
 
               LEARNING MODE = SUGGESTION
-              MENTORSPEC = SYSTEM
+              OWNYOURCODE = SYSTEM
 ```
 
 ---
@@ -264,7 +278,7 @@ This is what senior code review looks like. Now it happens on every task.
 
 ## The Learning Flywheel
 
-**Your learnings compound over time.** Unlike normal AI chats that forget everything, MentorSpec remembers.
+**Your learnings compound over time.** Unlike normal AI chats that forget everything, OwnYourCode remembers.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -324,13 +338,13 @@ This is what senior code review looks like. Now it happens on every task.
 
 When juniors try to shortcut the process:
 
-| They Say | Mentor Responds |
-|----------|-----------------|
-| "Just write the code for me" | "I could write it in 10 seconds. But then you'd learn nothing. What specifically are you stuck on?" |
-| "This is taking too long" | "Growth takes time. If we rush, you'll be stuck again tomorrow. Where exactly are you losing time?" |
-| "I don't need to explain it, it works" | "Working code you don't understand is a liability. Walk me through it, or we're not done." |
-| "Can you just fix this one thing?" | "I'll guide you to fix it. What do the logs/errors say?" |
-| "I already know this stuff" | "Great! Then explaining it should be quick. Walk me through your approach." |
+| They Say                               | Mentor Responds                                                                                     |
+| -------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| "Just write the code for me"           | "I could write it in 10 seconds. But then you'd learn nothing. What specifically are you stuck on?" |
+| "This is taking too long"              | "Growth takes time. If we rush, you'll be stuck again tomorrow. Where exactly are you losing time?" |
+| "I don't need to explain it, it works" | "Working code you don't understand is a liability. Walk me through it, or we're not done."          |
+| "Can you just fix this one thing?"     | "I'll guide you to fix it. What do the logs/errors say?"                                            |
+| "I already know this stuff"            | "Great! Then explaining it should be quick. Walk me through your approach."                         |
 
 **The resistance IS the workout. Growth requires friction.**
 
@@ -338,17 +352,17 @@ When juniors try to shortcut the process:
 
 ## Installation
 
-### Step 1: Install MentorSpec Base
+### Step 1: Install OwnYourCode Base
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/DanielPodolsky/mentor-spec/main/scripts/base-install.sh | bash
+curl -sSL https://raw.githubusercontent.com/DanielPodolsky/ownyourcode/main/scripts/base-install.sh | bash
 ```
 
 ### Step 2: Add to Your Project
 
 ```bash
 cd your-project
-~/mentor-spec/scripts/project-install.sh
+~/ownyourcode/scripts/project-install.sh
 ```
 
 ### Step 3: Initialize
@@ -356,7 +370,7 @@ cd your-project
 Open Claude Code in your project and run:
 
 ```
-/mentor-spec:init
+/own:init
 ```
 
 **That's it.** Claude is now your mentor, not your coder.
@@ -365,7 +379,7 @@ Open Claude Code in your project and run:
 
 ## MCP Integration (Recommended)
 
-MentorSpec uses MCPs (Model Context Protocol) for enhanced mentorship:
+OwnYourCode uses MCPs (Model Context Protocol) for enhanced mentorship:
 
 ### Context7 — Documentation Lookup
 
@@ -383,35 +397,35 @@ Search how production apps implement patterns. Learn from real code, not just th
 claude mcp add octocode
 ```
 
-| MCP | Purpose |
-|-----|---------|
+| MCP          | Purpose                                                      |
+| ------------ | ------------------------------------------------------------ |
 | **Context7** | "According to the React 19 docs..." — Official documentation |
 | **Octocode** | "Here's how Vercel implements this..." — Production patterns |
 
-> **Without MCPs:** MentorSpec still works, but operates at reduced effectiveness. The mentor can't verify answers against official docs or show real-world examples.
+> **Without MCPs:** OwnYourCode still works, but operates at reduced effectiveness. The mentor can't verify answers against official docs or show real-world examples.
 
 ---
 
 ## Commands
 
-| Command | Purpose |
-|---------|---------|
-| `/mentor-spec:init` | Define your mission, stack, and roadmap |
-| `/mentor-spec:feature` | Plan a feature with spec-driven development |
-| `/mentor-spec:advise` | Pre-work intelligence from your learning history |
-| `/mentor-spec:guide` | Get implementation guidance (patterns, not code) |
-| `/mentor-spec:test` | Guide through writing tests (you write, AI guides) |
-| `/mentor-spec:docs` | Guide through writing documentation |
-| `/mentor-spec:stuck` | Debug with Protocol D (systematic debugging) |
-| `/mentor-spec:done` | Complete with 6 Gates + code review + career extraction |
-| `/mentor-spec:retrospective` | Capture learnings for the flywheel |
-| `/mentor-spec:status` | Check progress + learning stats |
+| Command                      | Purpose                                                 |
+| ---------------------------- | ------------------------------------------------------- |
+| `/own:init`          | Define your mission, stack, and roadmap                 |
+| `/own:feature`       | Plan a feature with spec-driven development             |
+| `/own:advise`        | Pre-work intelligence from your learning history        |
+| `/own:guide`         | Get implementation guidance (patterns, not code)        |
+| `/own:test`          | Guide through writing tests (you write, AI guides)      |
+| `/own:docs`          | Guide through writing documentation                     |
+| `/own:stuck`         | Debug with Protocol D (systematic debugging)            |
+| `/own:done`          | Complete with 6 Gates + code review + career extraction |
+| `/own:retro` | Capture learnings for the flywheel                      |
+| `/own:status`        | Check progress + learning stats                         |
 
 ---
 
 ## Protocol D (Debugging)
 
-When you're stuck, MentorSpec doesn't solve it for you:
+When you're stuck, OwnYourCode doesn't solve it for you:
 
 ```
 ╔══════════════════════════════════════════════════════════════╗
@@ -466,9 +480,9 @@ your-project/
 │
 ├── .claude/                          ← Claude Code reads this
 │   ├── CLAUDE.md                     ← THE STRICTNESS (mentor rules)
-│   ├── commands/mentor-spec/         ← 10 slash commands
+│   ├── commands/ownyourcode/         ← 10 slash commands
 │   └── skills/                       ← Auto-invoked knowledge
-│       ├── fundamentals/             ← 11 core skills
+│       ├── fundamentals/             ← 11 core skills (silently applied)
 │       │   ├── frontend/
 │       │   ├── backend/
 │       │   ├── security/
@@ -476,21 +490,24 @@ your-project/
 │       │   ├── error-handling/
 │       │   ├── engineering/
 │       │   ├── database/
-│       │   ├── testing/              ← NEW in v2.0
-│       │   ├── seo/                  ← NEW in v2.0
-│       │   ├── accessibility/        ← NEW in v2.0
-│       │   └── documentation/        ← NEW in v2.0
+│       │   ├── testing/
+│       │   ├── seo/
+│       │   ├── accessibility/
+│       │   └── documentation/
 │       ├── gates/                    ← 6 mentorship gates
 │       ├── career/                   ← STAR + resume extraction
-│       └── learned/                  ← Auto-generated from /retrospective
+│       └── learned/                  ← Project-specific generated skills
 │
-├── mentorspec/                       ← Project documentation
+├── ownyourcode/                       ← Project documentation
 │   ├── product/                      ← Mission, stack, roadmap
 │   ├── specs/                        ← Feature specifications
+│   │   ├── active/                   ← Work in progress
+│   │   └── completed/                ← Archived (auto-moved by /done)
 │   └── career/                       ← Your interview stories
 │
+~/ownyourcode/                        ← GLOBAL (persists across projects)
 └── learning/                         ← The Learning Flywheel
-    ├── LEARNING_REGISTRY.md          ← Your growth tracker
+    ├── LEARNING_REGISTRY.md          ← Your growth tracker (all projects)
     ├── patterns/                     ← Reusable solutions
     └── failures/                     ← Mistakes you learned from
 ```
@@ -507,45 +524,47 @@ Building a house fast with someone else's hands means you can't build the next o
 
 ### "What if I just want the AI to code it?"
 
-Then MentorSpec will feel frustrating. It's designed to feel a bit uncomfortable — like a workout. Growth requires resistance.
+Then OwnYourCode will feel frustrating. It's designed to feel a bit uncomfortable — like a workout. Growth requires resistance.
 
 If you want AI to just write code, use a different tool. No judgment.
 
 ### "Is this only for complete beginners?"
 
-No. MentorSpec is for anyone who wants to **grow**, not just ship.
+No. OwnYourCode is for anyone who wants to **grow**, not just ship.
 
-If you're already senior and just want to ship fast, MentorSpec isn't for you. But if you're a junior who wants skills that last — welcome.
+If you're already senior and just want to ship fast, OwnYourCode isn't for you. But if you're a junior who wants skills that last — welcome.
 
 ### "How is this different from Claude's Learning mode?"
 
-Learning Mode is a **suggestion**. MentorSpec is a **system**.
+Learning Mode is a **suggestion**. OwnYourCode is a **system**.
 
-Learning Mode can be overridden by saying "just write the code." MentorSpec can't. Learning Mode forgets between sessions. MentorSpec's flywheel compounds your growth. Learning Mode has no checkpoints. MentorSpec has 6 mandatory gates.
+Learning Mode can be overridden by saying "just write the code." OwnYourCode can't. Learning Mode forgets between sessions. OwnYourCode's flywheel compounds your growth. Learning Mode has no checkpoints. OwnYourCode has 6 mandatory gates.
 
 ---
 
 ## Uninstall
 
 **From a project:**
+
 ```bash
-~/mentor-spec/scripts/project-uninstall.sh
+~/ownyourcode/scripts/project-uninstall.sh
 ```
 
 **Remove completely:**
+
 ```bash
-rm -rf ~/mentor-spec
+rm -rf ~/ownyourcode
 ```
 
 ---
 
 ## The Ultimate Test
 
-> *"If you took away the AI tomorrow, could you still code?"*
+> _"If you took away the AI tomorrow, could you still code?"_
 
-**Without MentorSpec:** Probably not.
+**Without OwnYourCode:** Probably not.
 
-**With MentorSpec:** **Yes.** Because you wrote every line. You understood every decision. You built real skills.
+**With OwnYourCode:** **Yes.** Because you wrote every line. You understood every decision. You built real skills.
 
 ---
 
@@ -565,5 +584,5 @@ rm -rf ~/mentor-spec
 ---
 
 <p align="center">
-  <sub>MIT License • v2.0 • Built for juniors who want to become seniors</sub>
+  <sub>MIT License • v2.1</sub>
 </p>
