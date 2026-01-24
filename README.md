@@ -221,17 +221,10 @@ your-project/
 
 Yes. That's the point. Building with someone else's hands means you can't build the next one alone. Building yourself, with guidance, takes longer — but now you can build anything.
 
-**The Ultimate Test**
-
-> _"If you took away the AI tomorrow, could you still code?"_
-
-With OwnYourCode: **Yes.** Because you wrote every line, understood every decision, and built real skills.
-
 ---
 
 <p align="center">
-  <strong>The goal is not to ship code.</strong><br>
-  <strong>The goal is to build the engineer.</strong>
+  <em>Less dependency, more ownership.</em>
 </p>
 
 <p align="center">
