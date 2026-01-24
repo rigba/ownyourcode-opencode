@@ -1,5 +1,6 @@
 <h1 align="center">
-  <img width="717" height="114" alt="OwnYourCode" src="https://github.com/user-attachments/assets/81bf37f6-d06a-4576-be3e-579e6bd30cd9" />
+  <img width="986" height="256" alt="ascii-art-text" src="https://github.com/user-attachments/assets/e3919357-88be-4f5e-af3a-aa3ac440bd98" />
+
 </h1>
 
 <p align="center">
