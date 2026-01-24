@@ -156,7 +156,7 @@ claude mcp add context7 --transport http https://mcp.context7.com/mcp
 
 **Octocode — GitHub Code Search**
 ```bash
-claude mcp add octocode
+https://octocode.ai/#installation
 ```
 
 | MCP | Purpose |
