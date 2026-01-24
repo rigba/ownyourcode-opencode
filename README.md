@@ -116,10 +116,11 @@ Before completing any task, your code passes through 6 quality checkpoints:
 Your learnings compound over time. Unlike normal AI chats that forget everything, OwnYourCode remembers.
 
 **The cycle:**
-- `/advise` — Before starting, get lessons from past work
-- **Work on task** — With mentored guidance
-- `/done` — Pass the 6 Gates
-- `/retro` — Capture what you learned
+- `/own:feature` — Plan a new feature (creates spec, design, tasks)
+- `/own:advise` — Get relevant learnings before starting a task
+- `/own:guide` — Get implementation help as you code
+- `/own:done` — Pass 6 Gates, code review, extract STAR story
+- `/own:retro` — Capture what you learned
 
 **What persists:**
 - **Patterns** — Solutions that worked
