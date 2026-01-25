@@ -38,7 +38,7 @@ Write-Host ""
 $ownyourcodeDir = Join-Path $PROJECT_DIR "ownyourcode"
 if (Test-Path $ownyourcodeDir) {
     Write-Warn "OwnYourCode already installed in this project."
-    $confirm = Read-Host "Reinstall? (y/N)"
+    $confirm = Read-Host "Reinstall? [y/N]"
     if ($confirm -ne "y" -and $confirm -ne "Y") {
         Write-Info "Cancelled."
         exit 0
@@ -104,7 +104,7 @@ if (Test-Path $CLAUDE_MD) {
 
     if ($content -match "OWNYOURCODE:") {
         Write-Warn "OwnYourCode section already exists in CLAUDE.md"
-        $replace = Read-Host "Replace existing OwnYourCode section? (y/N)"
+        $replace = Read-Host "Replace existing OwnYourCode section? [y/N]"
 
         if (($replace -eq "y" -or $replace -eq "Y") -and (Test-Path $TEMPLATE)) {
             # Remove existing section and append fresh
@@ -211,7 +211,7 @@ Write-OK "Career extraction skills installed"
 
 # Create .gitkeep for learned
 $gitkeepPath = Join-Path $PROJECT_DIR ".claude/skills/learned/.gitkeep"
-Set-Content -Path $gitkeepPath -Value "# Auto-generated skills go here (from /retrospective)"
+Set-Content -Path $gitkeepPath -Value "# Auto-generated skills go here - from /retrospective"
 
 # ============================================================================
 # STEP 6: Learning Registry Note
@@ -344,14 +344,14 @@ Write-Host ""
 
 Write-Info "What was created:"
 Write-Host ""
-Write-Host "  📁 ownyourcode/              — Your project docs (commit this)"
+Write-Host "  📁 ownyourcode/              — Your project docs [commit this]"
 Write-Host "     ├── product/             — Mission, stack, roadmap"
 Write-Host "     ├── specs/               — Feature specifications"
 Write-Host "     ├── career/              — Interview stories & bullets"
 Write-Host "     └── guides/              — Setup guides"
 Write-Host ""
 Write-Host "  📁 .claude/                 — Claude Code configuration"
-Write-Host "     ├── CLAUDE.md            — THE STRICTNESS (mentor behavior)"
+Write-Host "     ├── CLAUDE.md            — THE STRICTNESS [mentor behavior]"
 Write-Host "     ├── commands/            — Slash commands"
 Write-Host "     └── skills/              — Auto-invoked mentorship skills"
 Write-Host "         ├── fundamentals/    — Core review skills"
@@ -360,7 +360,7 @@ Write-Host "         ├── career/          — STAR & resume extraction"
 Write-Host "         └── learned/         — Auto-generated from /retro"
 Write-Host ""
 Write-Host "  📁 ~/ownyourcode/learning/  — GLOBAL Learning Flywheel"
-Write-Host "     ├── LEARNING_REGISTRY.md — Your growth tracker (all projects)"
+Write-Host "     ├── LEARNING_REGISTRY.md — Your growth tracker [all projects]"
 Write-Host "     ├── patterns/            — Reusable solutions"
 Write-Host "     └── failures/            — Documented anti-patterns"
 Write-Host ""
@@ -370,14 +370,14 @@ Write-Host "  1. Open Claude Code in this project"
 Write-Host "  2. Run: /own:init"
 Write-Host ""
 Write-Info "The workflow:"
-Write-Host "  /own:feature  ->  Plan a new feature (creates spec, design, tasks)"
+Write-Host "  /own:feature  ->  Plan a new feature [creates spec, design, tasks]"
 Write-Host "  /own:advise   ->  Get relevant learnings before starting a task"
 Write-Host "  /own:guide    ->  Get implementation help as you code"
 Write-Host "  /own:done     ->  Pass 6 Gates, code review, extract STAR story"
 Write-Host "  /own:retro    ->  Capture what you learned"
 Write-Host ""
 
-Write-Info "MCP Setup (recommended):"
+Write-Info "MCP Setup [recommended]:"
 Write-Host "  Context7:  claude mcp add context7 --transport http https://mcp.context7.com/mcp"
 Write-Host "  OctoCode:  https://octocode.ai/#installation"
 Write-Host ""

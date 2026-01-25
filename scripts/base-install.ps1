@@ -31,7 +31,7 @@ Write-Host ""
 if (Test-Path $INSTALL_DIR) {
     Write-Warn "OwnYourCode already installed at $INSTALL_DIR"
     Write-Host ""
-    $update = Read-Host "Update existing installation? (y/N)"
+    $update = Read-Host "Update existing installation? [y/N]"
     if ($update -eq "y" -or $update -eq "Y") {
         Write-Info "Updating OwnYourCode..."
         $gitDir = Join-Path $INSTALL_DIR ".git"
