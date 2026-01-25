@@ -100,10 +100,10 @@ New-Item -ItemType Directory -Force -Path $patternsDir | Out-Null
 New-Item -ItemType Directory -Force -Path $failuresDir | Out-Null
 
 if (-not (Test-Path $registryPath)) {
-    $registryContent = @"
+    $registryContent = @'
 # Global Learning Registry
 
-> Automatically updated by ``/retrospective``. Query with ``/advise``.
+> Automatically updated by `/retrospective`. Query with `/advise`.
 > This file tracks your growth as an engineer across ALL projects.
 > Location: ~/ownyourcode/learning/ (global, not project-specific)
 
@@ -141,8 +141,8 @@ Track your growth over time:
 
 ## Detailed Entries
 
-*Entries will be added here chronologically as you complete ``/retrospective`` sessions.*
-"@
+*Entries will be added here chronologically as you complete `/retrospective` sessions.*
+'@
     Set-Content -Path $registryPath -Value $registryContent
     Write-OK "Global learning registry created at ~/ownyourcode/learning/"
 } else {

@@ -155,7 +155,7 @@ if (Test-Path $srcCommands) {
     foreach ($file in $files) {
         Copy-Item $file.FullName -Destination $destCommands -Force
     }
-    Write-OK "Commands installed ($($files.Count) commands)"
+    Write-OK ("Commands installed (" + $files.Count + " commands)")
 } else {
     Write-Warn "Commands directory not found"
 }
@@ -182,7 +182,7 @@ foreach ($skill in $fundamentals) {
         $fundamentalCount++
     }
 }
-Write-OK "$fundamentalCount Core Fundamental skills installed"
+Write-OK ($fundamentalCount.ToString() + " Core Fundamental skills installed")
 
 # Gates
 $gates = @("ownership", "security", "error", "performance", "fundamentals", "testing")
@@ -195,7 +195,7 @@ foreach ($gate in $gates) {
         $gateCount++
     }
 }
-Write-OK "$gateCount Mentorship Gate skills installed"
+Write-OK ($gateCount.ToString() + " Mentorship Gate skills installed")
 
 # Career
 $careerSkills = @("star-stories", "resume-bullets")
@@ -252,10 +252,10 @@ Write-Info "Creating product templates..."
 
 $productDir = Join-Path $PROJECT_DIR "ownyourcode/product"
 
-$missionContent = @"
+$missionContent = @'
 # Project Mission
 
-> Run ``/own:init`` to define your project vision.
+> Run `/own:init` to define your project vision.
 
 ## The Problem
 
@@ -268,12 +268,12 @@ $missionContent = @"
 ## Definition of Done
 
 <!-- When is this project DONE? What must work? -->
-"@
+'@
 
-$stackContent = @"
+$stackContent = @'
 # Technology Stack
 
-> Run ``/own:init`` to auto-detect and document your stack.
+> Run `/own:init` to auto-detect and document your stack.
 
 ## Frontend
 
@@ -286,12 +286,12 @@ $stackContent = @"
 ## Why These Choices?
 
 <!-- Document your reasoning -->
-"@
+'@
 
-$roadmapContent = @"
+$roadmapContent = @'
 # Project Roadmap
 
-> Run ``/own:init`` to create your development roadmap.
+> Run `/own:init` to create your development roadmap.
 
 ## Phase 1: Foundation
 
@@ -307,7 +307,7 @@ $roadmapContent = @"
 
 - [ ] Testing
 - [ ] Deployment
-"@
+'@
 
 Set-Content -Path (Join-Path $productDir "mission.md") -Value $missionContent
 Set-Content -Path (Join-Path $productDir "stack.md") -Value $stackContent
