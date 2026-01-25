@@ -156,7 +156,7 @@ if (Test-Path $srcCommands) {
         Copy-Item $file.FullName -Destination $destCommands -Force
     }
     $cmdCount = $files.Count
-    Write-OK "Commands installed ($cmdCount commands)"
+    Write-OK "Commands installed: $cmdCount"
 } else {
     Write-Warn "Commands directory not found"
 }
