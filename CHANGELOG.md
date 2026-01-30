@@ -4,6 +4,14 @@ All notable changes to OwnYourCode will be documented in this file.
 
 ---
 
+## [2.2.1] - 2026-01-30
+
+### Fixed
+
+- **Piped Installation Prompt**: Fixed interactive prompt not appearing when running `curl ... | bash`. Now reads from `/dev/tty` instead of stdin.
+
+---
+
 ## [2.2.0] - 2026-01-30
 
 ### The "Ownership & Polish" Release
