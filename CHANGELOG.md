@@ -4,6 +4,15 @@ All notable changes to OwnYourCode will be documented in this file.
 
 ---
 
+## [2.2.2] - 2026-01-30
+
+### Changed
+
+**Repository Configuration**
+- Added `.claude/agents/` to .gitignore for personal agent files
+
+---
+
 ## [2.2.1] - 2026-01-30
 
 ### Fixed
