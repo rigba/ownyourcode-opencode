@@ -39,7 +39,7 @@ echo ""
 if [ -d "$INSTALL_DIR" ]; then
     warn "OwnYourCode already installed at $INSTALL_DIR"
     echo ""
-    read -p "Update existing installation? (y/N): " update
+    read -p "Update existing installation? (y/N): " update < /dev/tty
     if [ "$update" = "y" ] || [ "$update" = "Y" ]; then
         info "Updating OwnYourCode..."
         cd "$INSTALL_DIR"
