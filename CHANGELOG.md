@@ -4,6 +4,40 @@ All notable changes to OwnYourCode will be documented in this file.
 
 ---
 
+## [2.2.0] - 2026-01-30
+
+### The "Ownership & Polish" Release
+
+Focused on clarity, consistency, and Windows compatibility. The README now sells the methodology, commands are unified, and Windows users can install without issues.
+
+### Changed
+
+#### README Transformation
+- Redesigned as a focused landing page (239 → 148 lines)
+- Surfaced "The 4 Protocols" as visible methodology
+- Removed badge wall and visual clutter
+- Changed positioning from "for Juniors" to universal ownership message
+- New tagline: "AI guides, you build. You own the result."
+
+#### Command Naming Unification
+- All commands now consistently use `/own:` prefix
+- Improved command descriptions for clearer purpose
+- Better onboarding flow in `/own:init`
+
+#### Skill Auto-Invocation
+- Optimized skill descriptions for improved pattern matching
+- Skills now trigger more reliably based on file context
+
+### Fixed
+
+#### Windows Installation
+- Fixed PowerShell string escaping (parentheses → brackets)
+- Fixed here-string compatibility issues
+- Used `irm` for project-install to bypass git encoding problems
+- Windows users can now install without manual intervention
+
+---
+
 ## [2.1.0] - 2026-01-06
 
 ### The "Global Learning + Silent Skills" Release
