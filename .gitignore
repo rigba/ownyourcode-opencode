@@ -24,3 +24,6 @@ remotion/
 # Non-OwnYourCode skills (personal/experimental)
 .claude/skills/frontend-design
 .claude/skills/remotion-best-practices
+
+# Personal agents
+.claude/agents/
