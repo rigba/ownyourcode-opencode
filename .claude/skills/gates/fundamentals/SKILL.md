@@ -1,6 +1,6 @@
 ---
 name: fundamentals-gate
-description: Verifies code quality including naming conventions, function size, and DRY principles. SUGGESTION gate that offers polish items during /done flow.
+description: Verifies code quality including naming conventions, function size, and DRY principles. SUGGESTION gate that offers polish items during /own:done flow.
 ---
 
 # Gate 5: Fundamentals Review

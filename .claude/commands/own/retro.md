@@ -10,7 +10,7 @@ Extract learnings from completed work and persist them for future reference.
 
 ## Overview
 
-This command is run **after** completing work (typically after `/done`). It:
+This command is run **after** completing work (typically after `/own:done`). It:
 1. Reflects on what was learned
 2. Documents patterns worth reusing
 3. Records failures to avoid
@@ -27,7 +27,7 @@ This command is run **after** completing work (typically after `/done`). It:
 
 > "What did you just finish working on?"
 
-If they just ran `/done`, reference that context.
+If they just ran `/own:done`, reference that context.
 
 Get:
 - Feature/task name
@@ -243,7 +243,7 @@ Based on accumulated learnings, assess growth:
 │                                         │
 │ NEXT TIME                               │
 │ ─────────────────                       │
-│ Run /advise before your next task       │
+│ Run /own:advise before your next task   │
 │ to surface these learnings.             │
 │                                         │
 └─────────────────────────────────────────┘
@@ -262,7 +262,7 @@ What's next?
 2. **Be specific** — Vague learnings aren't useful later
 3. **One pattern at a time** — Don't force it; quality over quantity
 4. **Registry is GLOBAL** — Learnings persist across ALL your projects at `~/ownyourcode/learning/`
-5. **Registry compounds** — Every entry makes /advise smarter
+5. **Registry compounds** — Every entry makes /own:advise smarter
 6. **Review periodically** — Skim your registry monthly
 
 ---
@@ -270,41 +270,41 @@ What's next?
 ## Learning Flywheel
 
 ```
-                    ┌──────────────┐
-                    │   /advise    │
-                    │  (query)     │
-                    └──────┬───────┘
-                           │
-                           ▼
+                    ┌────────────────┐
+                    │  /own:advise   │
+                    │    (query)     │
+                    └───────┬────────┘
+                            │
+                            ▼
               ┌────────────────────────┐
               │        WORK            │
               │  (build, debug, learn) │
               └────────────┬───────────┘
-                           │
-                           ▼
-                    ┌──────────────┐
-                    │    /done     │
-                    │  (complete)  │
-                    └──────┬───────┘
-                           │
-                           ▼
+                            │
+                            ▼
+                    ┌────────────────┐
+                    │   /own:done    │
+                    │   (complete)   │
+                    └───────┬────────┘
+                            │
+                            ▼
               ┌────────────────────────┐
-              │   /retrospective       │
+              │      /own:retro        │
               │  (extract learnings)   │
               └────────────┬───────────┘
-                           │
-                           ▼
+                            │
+                            ▼
               ┌────────────────────────┐
               │   GLOBAL REGISTRY      │
               │ ~/ownyourcode/learning │
               └────────────┬───────────┘
-                           │
-                           └──────────────┐
-                                          │
-                    ┌──────────────┐      │
-                    │   /advise    │◄─────┘
-                    │  (query)     │
-                    └──────────────┘
+                            │
+                            └──────────────┐
+                                           │
+                    ┌────────────────┐     │
+                    │  /own:advise   │◄────┘
+                    │    (query)     │
+                    └────────────────┘
 ```
 
 The more you use this loop, the smarter the system becomes.
@@ -323,4 +323,4 @@ The more you use this loop, the smarter the system becomes.
 
 Your goal: **⭐⭐⭐⭐⭐ in 30 days.**
 
-Every /retrospective moves you forward.
+Every /own:retro moves you forward.

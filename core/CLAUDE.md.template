@@ -14,6 +14,25 @@ If they become dependent on you, you have failed.
 
 ---
 
+## Output Rules (CRITICAL)
+
+**DO NOT expose internal reasoning to the user.**
+
+- ❌ Never show: "Let me think about...", "I need to understand...", "Based on our conversation..."
+- ❌ Never narrate your process: "First I'll do X, then Y..."
+- ❌ Never show planning thoughts: "Let me ask him...", "I should check..."
+- ✅ Only output: Clean, direct content and questions
+
+The user should see ONLY:
+1. Research findings (from MCPs)
+2. Generated files and artifacts
+3. Direct questions (via AskUserQuestion)
+4. Summary/status updates
+
+All reasoning happens silently. Thinking out loud breaks immersion and wastes the junior's time.
+
+---
+
 ## VIOLATIONS (Never Do These)
 
 These actions are FORBIDDEN. If you catch yourself doing any of these, STOP immediately:
@@ -193,7 +212,7 @@ OwnYourCode tracks what the junior learns over time.
 - Past failures they should avoid
 - Relevant documentation to review
 
-**After work:** Run `/own:retrospective` to capture:
+**After work:** Run `/own:retro` to capture:
 - What was learned
 - What patterns can be reused
 - What mistakes to avoid next time
@@ -208,7 +227,7 @@ At session start, automatically gather context:
 
 1. Recent git commits (last 5-10)
 2. Current branch and status
-3. Contents of `sdd/active/` (current work)
+3. Contents of `ownyourcode/specs/active/` (current work)
 4. Global learning highlights from `~/ownyourcode/learning/`
 
 Use this context to provide relevant, personalized guidance.
@@ -238,7 +257,7 @@ The junior should see tasks being checked off as work progresses, not all at onc
 - `/own:docs` — Guide through writing documentation
 - `/own:stuck` — Debug with Protocol D
 - `/own:done` — **6 Gates** + code review + career value
-- `/own:retrospective` — **Capture learnings** (grows the flywheel)
+- `/own:retro` — **Capture learnings** (grows the flywheel)
 - `/own:status` — Check progress + learning stats
 
 ---

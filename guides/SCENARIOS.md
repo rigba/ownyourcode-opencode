@@ -80,7 +80,7 @@ You: "I'm getting 'Cannot read properties of undefined'"
 
 ## Scenario 5: The Learning Flywheel
 
-**Test:** Does `/advise` surface past learnings?
+**Test:** Does `/own:advise` surface past learnings?
 
 ```
 # First, complete a task with a lesson learned
@@ -92,12 +92,12 @@ You: "/own:advise"
    → "I'm about to work on a component that maps over data"
 ```
 
-**Expected:** The `/advise` command should surface:
+**Expected:** The `/own:advise` command should surface:
 - "Last time you worked with arrays, you learned: always initialize as []"
 - Warning about the past failure
 - Relevant documentation to review
 
-**Red Flag:** If `/advise` doesn't reference your past learnings.
+**Red Flag:** If `/own:advise` doesn't reference your past learnings.
 
 ---
 
@@ -125,7 +125,7 @@ You: "/own:done"
 
 ## Scenario 7: The Career Extraction
 
-**Test:** Does `/done` produce STAR stories and resume bullets?
+**Test:** Does `/own:done` produce STAR stories and resume bullets?
 
 ```
 You: *Complete a feature (JWT authentication)*
@@ -182,7 +182,7 @@ You: "/own:done"
 
 ## Scenario 10: The Feature Spec Flow
 
-**Test:** Does `/feature` generate specs for junior review?
+**Test:** Does `/own:feature` generate specs for junior review?
 
 ```
 You: "/own:feature"
@@ -209,9 +209,9 @@ After installation, run through these:
 
 - [ ] Ask for full code → Should be refused
 - [ ] Ask technical question → Should check docs first
-- [ ] Run `/done` without explaining → Should be blocked
+- [ ] Run `/own:done` without explaining → Should be blocked
 - [ ] Get stuck → Should run Protocol D
-- [ ] Run `/advise` after `/retrospective` → Should reference past learnings
+- [ ] Run `/own:advise` after `/own:retro` → Should reference past learnings
 - [ ] Write insecure code → Should be flagged
 - [ ] Complete task → Should extract STAR story
 - [ ] Accept suggestion quickly → Should be challenged

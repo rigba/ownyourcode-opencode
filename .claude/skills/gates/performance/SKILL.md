@@ -1,6 +1,6 @@
 ---
 name: performance-gate
-description: Verifies performance including N+1 query detection, scalability assessment, and complexity analysis. WARNING gate triggered during /done flow.
+description: Verifies performance including N+1 query detection, scalability assessment, and complexity analysis. WARNING gate triggered during /own:done flow.
 ---
 
 # Gate 4: Performance Review

@@ -191,7 +191,7 @@ if [ -d "$BASE_DIR/.claude/skills/career" ]; then
 fi
 
 # Create .gitkeep for learned skills
-echo "# Auto-generated skills go here (from /retrospective)" > "$PROJECT_DIR/.claude/skills/learned/.gitkeep"
+echo "# Auto-generated skills go here (from /own:retro)" > "$PROJECT_DIR/.claude/skills/learned/.gitkeep"
 
 # ============================================================================
 # STEP 6: Learning Registry Note (v2.1 - Global Learning)
@@ -322,7 +322,7 @@ echo "     └── skills/              — Auto-invoked mentorship skills"
 echo "         ├── fundamentals/    — 13 Core review skills"
 echo "         ├── gates/           — 6 Mentorship gates"
 echo "         ├── career/          — STAR & resume extraction"
-echo "         └── learned/         — Auto-generated from /retrospective"
+echo "         └── learned/         — Auto-generated from /own:retro"
 echo ""
 echo "  📁 ~/ownyourcode/learning/  — GLOBAL Learning Flywheel"
 echo "     ├── LEARNING_REGISTRY.md — Your growth tracker (all projects)"

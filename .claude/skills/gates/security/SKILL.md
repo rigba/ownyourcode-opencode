@@ -1,6 +1,6 @@
 ---
 name: security-gate
-description: Verifies security before merge/deploy including OWASP Top 10, input validation, and auth checks. WARNING gate triggered during /done flow.
+description: Verifies security before merge/deploy including OWASP Top 10, input validation, and auth checks. WARNING gate triggered during /own:done flow.
 ---
 
 # Gate 2: Security Review

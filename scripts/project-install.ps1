@@ -211,7 +211,7 @@ Write-OK "Career extraction skills installed"
 
 # Create .gitkeep for learned
 $gitkeepPath = Join-Path $PROJECT_DIR ".claude/skills/learned/.gitkeep"
-Set-Content -Path $gitkeepPath -Value "# Auto-generated skills go here - from /retrospective"
+Set-Content -Path $gitkeepPath -Value "# Auto-generated skills go here - from /own:retro"
 
 # ============================================================================
 # STEP 6: Learning Registry Note
@@ -357,7 +357,7 @@ Write-Host "     └── skills/              — Auto-invoked mentorship skil
 Write-Host "         ├── fundamentals/    — Core review skills"
 Write-Host "         ├── gates/           — Mentorship gates"
 Write-Host "         ├── career/          — STAR & resume extraction"
-Write-Host "         └── learned/         — Auto-generated from /retro"
+Write-Host "         └── learned/         — Auto-generated from /own:retro"
 Write-Host ""
 Write-Host "  📁 ~/ownyourcode/learning/  — GLOBAL Learning Flywheel"
 Write-Host "     ├── LEARNING_REGISTRY.md — Your growth tracker [all projects]"

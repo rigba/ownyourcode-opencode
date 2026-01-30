@@ -1,6 +1,6 @@
 # Learning Registry
 
-> Automatically updated by `/retrospective`. Query with `/advise`.
+> Automatically updated by `/own:retro`. Query with `/own:advise`.
 > This file tracks your growth as an engineer across all sessions.
 
 ---
@@ -37,7 +37,7 @@ Track your growth over time:
 
 ## Detailed Entries
 
-*Entries will be added here chronologically as you complete `/retrospective` sessions.*
+*Entries will be added here chronologically as you complete `/own:retro` sessions.*
 
 <!--
 Entry Format:

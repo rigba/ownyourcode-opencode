@@ -1,6 +1,6 @@
 ---
 name: error-handling-gate
-description: Verifies error handling including empty catch detection, user-friendly messages, and logging. WARNING gate triggered during /done flow.
+description: Verifies error handling including empty catch detection, user-friendly messages, and logging. WARNING gate triggered during /own:done flow.
 ---
 
 # Gate 3: Error Handling Review

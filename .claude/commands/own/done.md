@@ -1,6 +1,6 @@
 ---
 name: done
-description: Complete a task with 5 Gates verification, code review, and career value extraction
+description: Complete a task with 6 Gates verification, code review, and career value extraction
 allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, Bash
 ---
 
@@ -294,12 +294,12 @@ If ALL tasks in the feature are complete:
 
 2. **Move the entire spec folder to completed:**
    ```bash
-   mv ownyourcode/specs/active/[feature]/ ownyourcode/specs/completed/
+   mv ownyourcode/specs/active/phase-[N]-[name]/ ownyourcode/specs/completed/
    ```
 
 3. Confirm to the junior:
    ```
-   ✅ Spec archived to completed/[feature]/
+   ✅ Spec archived to completed/phase-[N]-[name]/
    ```
 
 4. Update `roadmap.md` with progress
@@ -415,7 +415,7 @@ Accepted:
 
 After completing all phases:
 
-> "This was solid work. To lock in what you learned, run `/retrospective` to:
+> "This was solid work. To lock in what you learned, run `/own:retro` to:
 > - Document what worked well
 > - Note any challenges you overcame
 > - Update your learning registry
@@ -456,7 +456,7 @@ After completing all phases:
 └─────────────────────────────────────────┘
 
 Next steps:
-- Run /retrospective to document learnings
+- Run /own:retro to document learnings
 - Run /own:status to see roadmap progress
 - Run /own:feature to start next feature
 ```
@@ -471,4 +471,4 @@ Next steps:
 4. **Don't give fixes** — Ask what they would change instead
 5. **STAR is powerful** — Help them tell their story well
 6. **Resume bullets matter** — These can make or break a job search
-7. **Prompt /retrospective** — Learning flywheel captures growth
+7. **Prompt /own:retro** — Learning flywheel captures growth

@@ -104,7 +104,7 @@ if (-not (Test-Path $registryPath)) {
     $registryLines = @(
         "# Global Learning Registry",
         "",
-        "> Automatically updated by ``/retrospective``. Query with ``/advise``.",
+        "> Automatically updated by ``/own:retro``. Query with ``/own:advise``.",
         "> This file tracks your growth as an engineer across ALL projects.",
         "> Location: ~/ownyourcode/learning/ (global, not project-specific)",
         "",
@@ -142,7 +142,7 @@ if (-not (Test-Path $registryPath)) {
         "",
         "## Detailed Entries",
         "",
-        "*Entries will be added here chronologically as you complete ``/retrospective`` sessions.*"
+        "*Entries will be added here chronologically as you complete ``/own:retro`` sessions.*"
     )
     Set-Content -Path $registryPath -Value ($registryLines -join $nl)
     Write-OK "Global learning registry created at ~/ownyourcode/learning/"

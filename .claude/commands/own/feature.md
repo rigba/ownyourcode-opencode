@@ -17,9 +17,12 @@ This command follows the SDD workflow:
 4. **Then** implementation begins with mentorship
 
 **Output:**
-- `ownyourcode/specs/active/[feature-name]/spec.md` — Feature specification
-- `ownyourcode/specs/active/[feature-name]/design.md` — Technical design
-- `ownyourcode/specs/active/[feature-name]/tasks.md` — Phased implementation checklist
+- `ownyourcode/specs/active/phase-[N]-[phase-name]/spec.md` — Feature specification
+- `ownyourcode/specs/active/phase-[N]-[phase-name]/design.md` — Technical design
+- `ownyourcode/specs/active/phase-[N]-[phase-name]/tasks.md` — Phased implementation checklist
+
+**Naming convention:** `phase-1-foundation`, `phase-2-core-features`, `phase-3-polish`
+This gives clear visibility of which phase you're working on.
 
 ---
 
@@ -33,6 +36,40 @@ The implementation phase is where the junior learns by doing.
 ---
 
 ## Execution Flow
+
+### Before Asking Questions: Check the Roadmap
+
+Before asking the user for feature details, automatically check the roadmap:
+
+1. **Read** `ownyourcode/product/roadmap.md`
+2. **Find** the first phase with any incomplete tasks (`- [ ]`)
+3. **Auto-select** that phase — no asking, keep it simple
+
+**Completion criteria:**
+- A phase is COMPLETE when: All tasks marked `[x]`
+- A phase is INCOMPLETE if: Any task is `[ ]`
+
+**If roadmap found with incomplete phase:**
+```
+📍 Detected from roadmap: Phase [N] — [Phase Name]
+
+This phase covers:
+- [Task 1]
+- [Task 2]
+...
+
+Generating specs for this phase...
+```
+→ Proceed directly to Phase 2 (MCP Research)
+→ Spec folder: `ownyourcode/specs/active/phase-[N]-[phase-name]/`
+
+**If NO roadmap exists:**
+→ Ask user for feature details (proceed to "Core Requirements" section below)
+
+**If ALL phases complete:**
+→ Congratulate them! Then ask what they want to build next.
+
+---
 
 ### Phase 1: Core Requirements (Minimal Input)
 
@@ -416,7 +453,7 @@ Based on Context7 and Octocode research:
 ## Completion
 
 - [ ] Self-review: Does it match the spec?
-- [ ] Run /own:done for 5 Gates + code review + STAR story
+- [ ] Run /own:done for 6 Gates + code review + STAR story
 - [ ] Run /own:retro to capture learnings
 
 ## Progress Tracking
@@ -443,4 +480,4 @@ Based on Context7 and Octocode research:
 4. **Edge cases are pre-populated** — Junior adds any we missed
 5. **Out of Scope is critical** — Prevents feature creep
 6. **Use MCPs** — Context7 for docs, Octocode for production patterns
-7. **Prompt /advise** — Before implementing, run /advise for preparation
+7. **Prompt /own:advise** — Before implementing, run /own:advise for preparation

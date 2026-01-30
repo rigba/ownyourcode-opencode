@@ -105,7 +105,7 @@ if [ ! -f "$INSTALL_DIR/learning/LEARNING_REGISTRY.md" ]; then
     cat > "$INSTALL_DIR/learning/LEARNING_REGISTRY.md" << 'EOF'
 # Global Learning Registry
 
-> Automatically updated by `/retrospective`. Query with `/advise`.
+> Automatically updated by `/own:retro`. Query with `/own:advise`.
 > This file tracks your growth as an engineer across ALL projects.
 > Location: ~/ownyourcode/learning/ (global, not project-specific)
 
@@ -143,7 +143,7 @@ Track your growth over time:
 
 ## Detailed Entries
 
-*Entries will be added here chronologically as you complete `/retrospective` sessions.*
+*Entries will be added here chronologically as you complete `/own:retro` sessions.*
 EOF
     success "Global learning registry created at ~/ownyourcode/learning/"
 else

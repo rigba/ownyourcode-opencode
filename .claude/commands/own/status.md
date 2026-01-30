@@ -68,8 +68,8 @@ Overall: ████░░░░░░ 40%
 ```markdown
 ## Active Specs
 
-### [Feature Name] (in progress)
-Location: ownyourcode/specs/active/[slug]/
+### Phase [N]: [Phase Name] (in progress)
+Location: ownyourcode/specs/active/phase-[N]-[name]/
 
 Tasks:
 - [x] [Completed task]
@@ -254,8 +254,10 @@ Quick Commands:
   /own:advise        — Pre-work intelligence gathering
   /own:guide         — Get implementation help
   /own:stuck         — Debug an issue
-  /own:done          — Complete a task (with 5 Gates)
-  /own:retro — Capture learnings
+  /own:test          — Write tests (you write)
+  /own:docs          — Write documentation (you write)
+  /own:done          — Complete a task (with 6 Gates)
+  /own:retro         — Capture learnings
   /own:status        — You're here!
 ```
 
@@ -280,4 +282,4 @@ Quick Commands:
 3. **Career stats encourage** — Seeing interview stories grow is powerful
 4. **Gentle nudges** — If inactive, welcome them back without judgment
 5. **Keep it visual** — Progress bars are satisfying
-6. **Flywheel reminder** — Encourage /retrospective usage
+6. **Flywheel reminder** — Encourage /own:retro usage

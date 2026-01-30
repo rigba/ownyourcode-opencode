@@ -100,7 +100,7 @@ As you work, pay attention to:
 - Mistakes to avoid
 - Insights worth remembering
 
-Run /retrospective when you're done to capture learnings.
+Run /own:retro when you're done to capture learnings.
 ```
 
 ---
@@ -264,7 +264,7 @@ This forces thinking before typing.
 ## Important Notes
 
 1. **Don't skip this** — 5 minutes of prep saves hours of debugging
-2. **Learning registry is gold** — It grows with every /retrospective
+2. **Learning registry is gold** — It grows with every /own:retro
 3. **MCPs are your research team** — Use them liberally
 4. **Plan first** — Seniors think before they code
 5. **Context7 for docs, Octocode for patterns** — Each MCP has its strength
@@ -273,7 +273,7 @@ This forces thinking before typing.
 
 ## Why This Matters
 
-| Without /advise | With /advise |
+| Without /own:advise | With /own:advise |
 |-----------------|--------------|
 | Repeat past mistakes | Learn from history |
 | Jump into code blind | Start with a plan |
@@ -298,13 +298,13 @@ This forces thinking before typing.
 ## Learning Flywheel Connection
 
 ```
-/advise → Work → /done → /retrospective
+/own:advise → Work → /own:done → /own:retro
     ↑                          │
     └──── Global Registry  ←───┘
           ~/ownyourcode/learning/
            + MCP Research
 ```
 
-Every /retrospective adds to your global registry.
-Every /advise queries that growing knowledge base PLUS live research.
+Every /own:retro adds to your global registry.
+Every /own:advise queries that growing knowledge base PLUS live research.
 Over time, you build a personal playbook that persists across ALL your projects.

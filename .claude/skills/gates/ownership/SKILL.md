@@ -1,6 +1,6 @@
 ---
 name: ownership-gate
-description: Verifies junior truly understands code they wrote through line-by-line walkthrough. BLOCKING gate that must pass to complete any task. Triggered during /done flow.
+description: Verifies junior truly understands code they wrote through line-by-line walkthrough. BLOCKING gate that must pass to complete any task. Triggered during /own:done flow.
 ---
 
 # Gate 1: Ownership Verification

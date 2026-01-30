@@ -331,12 +331,12 @@ Priority: LOW
 
 ---
 
-### Phase 7: Summary & Next Step
+### Phase 7: Summary & Next Step (HARD STOP)
 
-After generating files, provide:
+After generating files, provide this summary and **STOP**:
 
 ```
-OwnYourCode initialized!
+✅ OwnYourCode initialized!
 
 Problem: [One-line from their answer]
 For: [Who they selected]
@@ -348,11 +348,49 @@ Created:
 - ownyourcode/product/stack.md
 - ownyourcode/product/roadmap.md
 
-Next step: Run /own:feature to plan your first feature.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🚀 NEXT: Run /own:feature to plan your first phase
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Pro tip: Before starting work, run /own:advise to gather
-intelligence from your learning registry and research tools.
+Your roadmap has [N] phases. /own:feature will auto-detect
+Phase 1 and generate specs for you to review.
+
+┌──────────────────────────────────────────────┐
+│  COMMANDS                                    │
+├──────────────────────────────────────────────┤
+│  Planning                                    │
+│    /own:feature  → Spec your next phase      │
+│    /own:advise   → Prep before coding        │
+│                                              │
+│  Building                                    │
+│    /own:guide    → Get implementation help   │
+│    /own:stuck    → Debug systematically      │
+│    /own:test     → Write tests (you write)   │
+│    /own:docs     → Write docs (you write)    │
+│                                              │
+│  Completing                                  │
+│    /own:done     → Finish + code review      │
+│    /own:retro    → Capture what you learned  │
+│                                              │
+│  Checking                                    │
+│    /own:status   → See your progress         │
+└──────────────────────────────────────────────┘
+
+💡 Your learnings persist across ALL projects.
+   Every /own:retro feeds the global registry.
+   Every /own:advise queries your past wins & failures.
+   The more you use it, the smarter it gets.
 ```
+
+**END COMMAND HERE.**
+
+Do NOT:
+- Suggest implementation steps
+- Start discussing the first task
+- Continue with unsolicited guidance
+
+If they have questions about the roadmap or want to adjust anything,
+they can ask — but don't proactively continue. Let them take the next step.
 
 ---
 

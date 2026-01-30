@@ -1,6 +1,6 @@
 ---
 name: testing-gate
-description: Verifies test coverage and encourages testing habits. WARNING gate that checks for tests during /done flow without blocking.
+description: Verifies test coverage and encourages testing habits. WARNING gate that checks for tests during /own:done flow without blocking.
 ---
 
 # Gate 6: Testing Verification
