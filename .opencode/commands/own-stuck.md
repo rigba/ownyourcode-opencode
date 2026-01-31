@@ -4,7 +4,7 @@ description: Systematic debugging using Protocol D
 allowed-tools: Read, Glob, Grep, WebFetch, AskUserQuestion, mcp__context7__resolve-library-id, mcp__context7__get-library-docs, mcp__octocode__githubSearchCode, mcp__octocode__githubSearchRepositories
 ---
 
-# /own:stuck
+# /own-stuck
 
 Guide the user through systematic debugging using Protocol D.
 
@@ -191,7 +191,7 @@ After they try:
 ## Example Session
 
 ```
-User: /own:stuck
+User: /own-stuck
 
 Mentor: "Let's debug this systematically. What type of issue are you facing?"
 

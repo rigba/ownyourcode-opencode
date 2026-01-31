@@ -211,7 +211,7 @@ Write-OK "Career extraction skills installed"
 
 # Create .gitkeep for learned
 $gitkeepPath = Join-Path $PROJECT_DIR ".opencode/skills/learned/.gitkeep"
-Set-Content -Path $gitkeepPath -Value "# Auto-generated skills go here - from /own:retro"
+Set-Content -Path $gitkeepPath -Value "# Auto-generated skills go here - from /own-retro"
 
 # ============================================================================
 # STEP 6: Learning Registry Note
@@ -257,7 +257,7 @@ $nl = [Environment]::NewLine
 $missionLines = @(
     "# Project Mission",
     "",
-    "> Run ``/own:init`` to define your project vision.",
+    "> Run ``/own-init`` to define your project vision.",
     "",
     "## The Problem",
     "",
@@ -276,7 +276,7 @@ Set-Content -Path (Join-Path $productDir "mission.md") -Value ($missionLines -jo
 $stackLines = @(
     "# Technology Stack",
     "",
-    "> Run ``/own:init`` to auto-detect and document your stack.",
+    "> Run ``/own-init`` to auto-detect and document your stack.",
     "",
     "## Frontend",
     "",
@@ -295,7 +295,7 @@ Set-Content -Path (Join-Path $productDir "stack.md") -Value ($stackLines -join $
 $roadmapLines = @(
     "# Project Roadmap",
     "",
-    "> Run ``/own:init`` to create your development roadmap.",
+    "> Run ``/own-init`` to create your development roadmap.",
     "",
     "## Phase 1: Foundation",
     "",
@@ -357,7 +357,7 @@ Write-Host "     └── skills/              — Auto-invoked mentorship skil
 Write-Host "         ├── fundamentals/    — Core review skills"
 Write-Host "         ├── gates/           — Mentorship gates"
 Write-Host "         ├── career/          — STAR & resume extraction"
-Write-Host "         └── learned/         — Auto-generated from /own:retro"
+Write-Host "         └── learned/         — Auto-generated from /own-retro"
 Write-Host ""
 Write-Host "  📁 ~/ownyourcode/learning/  — GLOBAL Learning Flywheel"
 Write-Host "     ├── LEARNING_REGISTRY.md — Your growth tracker [all projects]"
@@ -367,14 +367,14 @@ Write-Host ""
 
 Write-Info "Next steps:"
 Write-Host "  1. Open OpenCode in this project"
-Write-Host "  2. Run: /own:init"
+Write-Host "  2. Run: /own-init"
 Write-Host ""
 Write-Info "The workflow:"
-Write-Host "  /own:feature  ->  Plan a new feature [creates spec, design, tasks]"
-Write-Host "  /own:advise   ->  Get relevant learnings before starting a task"
-Write-Host "  /own:guide    ->  Get implementation help as you code"
-Write-Host "  /own:done     ->  Pass 6 Gates, code review, extract STAR story"
-Write-Host "  /own:retro    ->  Capture what you learned"
+Write-Host "  /own-feature  ->  Plan a new feature [creates spec, design, tasks]"
+Write-Host "  /own-advise   ->  Get relevant learnings before starting a task"
+Write-Host "  /own-guide    ->  Get implementation help as you code"
+Write-Host "  /own-done     ->  Pass 6 Gates, code review, extract STAR story"
+Write-Host "  /own-retro    ->  Capture what you learned"
 Write-Host ""
 
 Write-Info "MCP Setup [recommended]:"

@@ -4,7 +4,7 @@ description: Initialize OwnYourCode project with mission, stack, and roadmap
 allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, Bash, mcp__context7__resolve-library-id, mcp__context7__get-library-docs, mcp__octocode__githubSearchRepositories, mcp__octocode__githubViewRepoStructure
 ---
 
-# /own:init
+# /own-init
 
 Initialize a OwnYourCode project by defining the mission, detecting the stack, and creating a roadmap.
 
@@ -382,10 +382,10 @@ Created:
 - ownyourcode/product/roadmap.md
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🚀 NEXT: Run /own:feature to plan your first phase
+🚀 NEXT: Run /own-feature to plan your first phase
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Your roadmap has [N] phases. /own:feature will auto-detect
+Your roadmap has [N] phases. /own-feature will auto-detect
 Phase 1 and generate specs for you to review.
 
 ┌──────────────────────────────────────────────┐
@@ -410,8 +410,8 @@ Phase 1 and generate specs for you to review.
 └──────────────────────────────────────────────┘
 
 💡 Your learnings persist across ALL projects.
-   Every /own:retro feeds the global registry.
-   Every /own:advise queries your past wins & failures.
+   Every /own-retro feeds the global registry.
+   Every /own-advise queries your past wins & failures.
    The more you use it, the smarter it gets.
 ```
 

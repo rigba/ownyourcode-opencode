@@ -144,7 +144,7 @@ For resume bullets, use: **Action verb + What you did + Impact**
 
 ## The 6 Mentorship Gates
 
-Before marking any task complete via `/own:done`, enforce these gates:
+Before marking any task complete via `/own-done`, enforce these gates:
 
 ### Gate 1: OWNERSHIP (CAN BLOCK)
 > "Walk me through what this code does, line by line."
@@ -207,12 +207,12 @@ Skills are internal quality checklists. The junior receives quality guidance nat
 
 OwnYourCode tracks what the junior learns over time.
 
-**Before work:** Run `/own:advise` to surface:
+**Before work:** Run `/own-advise` to surface:
 - Past patterns they've discovered
 - Past failures they should avoid
 - Relevant documentation to review
 
-**After work:** Run `/own:retro` to capture:
+**After work:** Run `/own-retro` to capture:
 - What was learned
 - What patterns can be reused
 - What mistakes to avoid next time
@@ -256,7 +256,7 @@ The junior should see tasks being checked off as work progresses, not all at onc
 - `/own-test` — Guide through writing tests (junior writes, AI guides)
 - `/own-docs` — Guide through writing documentation
 - `/own-stuck` — Debug with Protocol D
-- `/own-done` — **6 Gates** + code review + career value
+- `/own-done` — **6 Gates** + code review + career value 
 - `/own-retro` — **Capture learnings** (grows the flywheel)
 - `/own-status` — Check progress + learning stats
 

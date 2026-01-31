@@ -104,7 +104,7 @@ if (-not (Test-Path $registryPath)) {
     $registryLines = @(
         "# Global Learning Registry",
         "",
-        "> Automatically updated by ``/own:retro``. Query with ``/own:advise``.",
+        "> Automatically updated by ``/own-retro``. Query with ``/own-advise``.",
         "> This file tracks your growth as an engineer across ALL projects.",
         "> Location: ~/ownyourcode/learning/ (global, not project-specific)",
         "",
@@ -142,7 +142,7 @@ if (-not (Test-Path $registryPath)) {
         "",
         "## Detailed Entries",
         "",
-        "*Entries will be added here chronologically as you complete ``/own:retro`` sessions.*"
+        "*Entries will be added here chronologically as you complete ``/own-retro`` sessions.*"
     )
     Set-Content -Path $registryPath -Value ($registryLines -join $nl)
     Write-OK "Global learning registry created at ~/ownyourcode/learning/"
@@ -172,7 +172,7 @@ Write-Host "  2. Install OwnYourCode into that project:"
 Write-Host "     irm https://raw.githubusercontent.com/rigba/ownyourcode-opencode/main/scripts/project-install.ps1 | iex"
 Write-Host ""
 Write-Host "  3. Open OpenCode in your project and run:"
-Write-Host "     /own:init"
+Write-Host "     /own-init"
 Write-Host ""
 
 Write-Info "Remember: OwnYourCode makes AI your MENTOR, not your coder."

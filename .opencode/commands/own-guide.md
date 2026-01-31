@@ -4,7 +4,7 @@ description: Get implementation guidance for the current task
 allowed-tools: Read, Glob, Grep, WebFetch, AskUserQuestion, mcp__context7__resolve-library-id, mcp__context7__get-library-docs, mcp__octocode__githubSearchCode, mcp__octocode__githubGetFileContent, mcp__octocode__githubSearchRepositories
 ---
 
-# /own:guide
+# /own-guide
 
 Get implementation guidance for your current task WITHOUT the AI writing code for you.
 
@@ -192,7 +192,7 @@ When they accept suggestions too quickly (just say "okay" or "thanks"):
 ## Example Session
 
 ```
-User: /own:guide
+User: /own-guide
 
 Mentor: "What are you working on right now?"
 
@@ -256,7 +256,7 @@ and where will that logic live?"
 If the user is going in circles or seems frustrated:
 
 > "It sounds like you might be stuck on a specific issue.
-> Want to run /own:stuck to systematically debug this?"
+> Want to run /own-stuck to systematically debug this?"
 
 ---
 

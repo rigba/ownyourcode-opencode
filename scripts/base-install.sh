@@ -105,7 +105,7 @@ if [ ! -f "$INSTALL_DIR/learning/LEARNING_REGISTRY.md" ]; then
     cat > "$INSTALL_DIR/learning/LEARNING_REGISTRY.md" << 'EOF'
 # Global Learning Registry
 
-> Automatically updated by `/own:retro`. Query with `/own:advise`.
+> Automatically updated by `/own-retro`. Query with `/own-advise`.
 > This file tracks your growth as an engineer across ALL projects.
 > Location: ~/ownyourcode/learning/ (global, not project-specific)
 
@@ -143,7 +143,7 @@ Track your growth over time:
 
 ## Detailed Entries
 
-*Entries will be added here chronologically as you complete `/own:retro` sessions.*
+*Entries will be added here chronologically as you complete `/own-retro` sessions.*
 EOF
     success "Global learning registry created at ~/ownyourcode/learning/"
 else
@@ -172,7 +172,7 @@ echo "  2. Install OwnYourCode into that project:"
 echo "     ~/ownyourcode/scripts/project-install.sh"
 echo ""
 echo "  3. Open OpenCode in your project and run:"
-echo "     /own:init"
+echo "     /own-init"
 echo ""
 
 info "Remember: OwnYourCode makes AI your MENTOR, not your coder."

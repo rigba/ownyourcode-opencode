@@ -4,7 +4,7 @@ description: Complete a task with 6 Gates verification, code review, and career 
 allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, Bash
 ---
 
-# /own:done
+# /own-done
 
 Complete a task with gate checks, senior-level code review, and career value extraction.
 

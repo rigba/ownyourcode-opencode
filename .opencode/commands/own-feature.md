@@ -4,7 +4,7 @@ description: Create a feature specification using spec-driven development
 allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, mcp__context7__resolve-library-id, mcp__context7__get-library-docs, mcp__octocode__githubSearchCode, mcp__octocode__githubGetFileContent, mcp__octocode__githubSearchRepositories
 ---
 
-# /own:feature
+# /own-feature
 
 Create a feature specification using **Spec-Driven Development (SDD)**.
 
@@ -162,7 +162,7 @@ frontend, backend, database, security, performance, error-handling, engineering,
 - **testing skill** → Include "what tests to write" in tasks.md
 
 **How skills shape code review:**
-- During `/own:done`, apply skill checklists naturally
+- During `/own-done`, apply skill checklists naturally
 - Never say "according to the accessibility skill" — just give the guidance
 
 Example internal note (not shown to junior):

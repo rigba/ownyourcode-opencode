@@ -4,7 +4,7 @@ description: Pre-work command that queries past learnings and leverages MCPs bef
 allowed-tools: Read, Glob, Grep, AskUserQuestion, mcp__context7__resolve-library-id, mcp__context7__get-library-docs, mcp__octocode__githubSearchCode, mcp__octocode__githubGetFileContent, mcp__octocode__githubViewRepoStructure, mcp__octocode__githubSearchRepositories
 ---
 
-# /own:advise
+# /own-advise
 
 Query past learnings and leverage research tools before starting a new task.
 

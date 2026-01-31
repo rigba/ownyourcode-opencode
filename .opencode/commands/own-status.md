@@ -4,7 +4,7 @@ description: Check project progress, active tasks, learning stats, and career po
 allowed-tools: Read, Glob, Grep, Bash
 ---
 
-# /own:status
+# /own-status
 
 Get a comprehensive status report on project progress and learning growth.
 

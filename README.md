@@ -45,7 +45,7 @@ irm https://raw.githubusercontent.com/rigba/ownyourcode-opencode/main/scripts/pr
 **Initialize**
 
 ```
-/own:init
+/own-init
 ```
 
 ---
@@ -85,7 +85,7 @@ Before completing any task, your code passes through 6 quality checkpoints:
 Your learnings compound. OwnYourCode captures patterns, failures, and career stories — then resurfaces them when relevant.
 
 ```
-/own:feature → /own:advise → /own:guide → /own:done → /own:retro
+/own-feature → /own-advise → /own-guide → /own-done → /own-retro
      ↑                                                      |
      └──────────────────────────────────────────────────────┘
 ```
@@ -105,16 +105,16 @@ Each cycle makes the next one smarter.
 
 | Command        | Purpose                                                 |
 | -------------- | ------------------------------------------------------- |
-| `/own:init`    | Define your mission, stack, and roadmap                 |
-| `/own:feature` | Plan a feature with spec-driven development             |
-| `/own:advise`  | Pre-work intelligence from your learning history        |
-| `/own:guide`   | Get implementation guidance (patterns, not code)        |
-| `/own:test`    | Guide through writing tests                             |
-| `/own:docs`    | Guide through writing documentation                     |
-| `/own:stuck`   | Debug with Protocol D                                   |
-| `/own:done`    | Complete with 6 Gates + code review + career extraction |
-| `/own:retro`   | Capture learnings for the flywheel                      |
-| `/own:status`  | Check progress + learning stats                         |
+| `/own-init`    | Define your mission, stack, and roadmap                 |
+| `/own-feature` | Plan a feature with spec-driven development             |
+| `/own-advise`  | Pre-work intelligence from your learning history        |
+| `/own-guide`   | Get implementation guidance (patterns, not code)        |
+| `/own-test`    | Guide through writing tests                             |
+| `/own-docs`    | Guide through writing documentation                     |
+| `/own-stuck`   | Debug with Protocol D                                   |
+| `/own-done`    | Complete with 6 Gates + code review + career extraction |
+| `/own-retro`   | Capture learnings for the flywheel                      |
+| `/own-status`  | Check progress + learning stats                         |
 
 ---
 

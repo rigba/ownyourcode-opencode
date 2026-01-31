@@ -191,7 +191,7 @@ if [ -d "$BASE_DIR/.opencode/skills/career" ]; then
 fi
 
 # Create .gitkeep for learned skills
-echo "# Auto-generated skills go here (from /own:retro)" > "$PROJECT_DIR/.opencode/skills/learned/.gitkeep"
+echo "# Auto-generated skills go here (from /own-retro)" > "$PROJECT_DIR/.opencode/skills/learned/.gitkeep"
 
 # ============================================================================
 # STEP 6: Learning Registry Note (v2.1 - Global Learning)
@@ -225,7 +225,7 @@ info "Creating product templates..."
 cat > "$PROJECT_DIR/ownyourcode/product/mission.md" << 'EOF'
 # Project Mission
 
-> Run `/own:init` to define your project vision.
+> Run `/own-init` to define your project vision.
 
 ## The Problem
 
@@ -243,7 +243,7 @@ EOF
 cat > "$PROJECT_DIR/ownyourcode/product/stack.md" << 'EOF'
 # Technology Stack
 
-> Run `/own:init` to auto-detect and document your stack.
+> Run `/own-init` to auto-detect and document your stack.
 
 ## Frontend
 
@@ -261,7 +261,7 @@ EOF
 cat > "$PROJECT_DIR/ownyourcode/product/roadmap.md" << 'EOF'
 # Project Roadmap
 
-> Run `/own:init` to create your development roadmap.
+> Run `/own-init` to create your development roadmap.
 
 ## Phase 1: Foundation
 
@@ -321,7 +321,7 @@ echo "     └── skills/              — Auto-invoked mentorship skills"
 echo "         ├── fundamentals/    — 13 Core review skills"
 echo "         ├── gates/           — 6 Mentorship gates"
 echo "         ├── career/          — STAR & resume extraction"
-echo "         └── learned/         — Auto-generated from /own:retro"
+echo "         └── learned/         — Auto-generated from /own-retro"
 echo ""
 echo "  📁 ~/ownyourcode/learning/  — GLOBAL Learning Flywheel"
 echo "     ├── LEARNING_REGISTRY.md — Your growth tracker (all projects)"
@@ -331,14 +331,14 @@ echo ""
 
 info "Next steps:"
 echo "  1. Open OpenCode in this project"
-echo "  2. Run: /own:init"
+echo "  2. Run: /own-init"
 echo ""
 info "The workflow:"
-echo "  /own:feature  →  Plan a new feature (creates spec, design, tasks)"
-echo "  /own:advise   →  Get relevant learnings before starting a task"
-echo "  /own:guide    →  Get implementation help as you code"
-echo "  /own:done     →  Pass 6 Gates, code review, extract STAR story"
-echo "  /own:retro    →  Capture what you learned"
+echo "  /own-feature  →  Plan a new feature (creates spec, design, tasks)"
+echo "  /own-advise   →  Get relevant learnings before starting a task"
+echo "  /own-guide    →  Get implementation help as you code"
+echo "  /own-done     →  Pass 6 Gates, code review, extract STAR story"
+echo "  /own-retro    →  Capture what you learned"
 echo ""
 
 info "MCP Setup (recommended):"

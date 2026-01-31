@@ -4,7 +4,7 @@ description: Post-work command that extracts learnings and updates the learning 
 allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, mcp__octocode__githubSearchCode, mcp__octocode__githubGetFileContent
 ---
 
-# /own:retro
+# /own-retro
 
 Extract learnings from completed work and persist them for future reference.
 

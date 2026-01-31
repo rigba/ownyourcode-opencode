@@ -4,7 +4,7 @@ description: Guide the junior through writing tests for their feature
 allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, Bash, mcp__context7__resolve-library-id, mcp__context7__get-library-docs, mcp__octocode__githubSearchCode, mcp__octocode__githubGetFileContent
 ---
 
-# /own:test
+# /own-test
 
 Guide the junior through writing tests for their feature. **They write the tests, you guide what to test.**
 
@@ -299,7 +299,7 @@ npm init playwright@latest
 ## Example Session
 
 ```
-User: /own:test
+User: /own-test
 
 Mentor: "What do you want to test?"
 
