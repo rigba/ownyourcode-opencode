@@ -1,6 +1,6 @@
 # OwnYourCode Project Installation Script (Windows - OpenCode Version)
 # AI-Mentored Development for Juniors
-# Version 2.2.2-opencode
+# Version 2.2.3-opencode
 
 $ErrorActionPreference = "Stop"
 
@@ -18,7 +18,7 @@ function Write-Err { param($msg) Write-Host "[ERROR] $msg" -ForegroundColor Red;
 # Header
 Write-Host ""
 Write-Host "╔═══════════════════════════════════════════════════════════╗" -ForegroundColor Green
-Write-Host "║     OwnYourCode Installation v2.2.2 (OpenCode Version)    ║" -ForegroundColor Green
+Write-Host "║     OwnYourCode Installation v2.2.3 (OpenCode Version)    ║" -ForegroundColor Green
 Write-Host "║       AI-Mentored Spec-Driven Development Engine          ║" -ForegroundColor Green
 Write-Host "╚═══════════════════════════════════════════════════════════╝" -ForegroundColor Green
 Write-Host ""
@@ -335,11 +335,11 @@ if (Test-Path $gitignorePath) {
 
 Write-Host ""
 Write-Host "╔═══════════════════════════════════════════════════════════╗" -ForegroundColor Green
-Write-Host "║   Installation Complete! v2.2.2-opencode                  ║" -ForegroundColor Green
+Write-Host "║   Installation Complete! v2.2.3-opencode                  ║" -ForegroundColor Green
 Write-Host "╚═══════════════════════════════════════════════════════════╝" -ForegroundColor Green
 Write-Host ""
 
-Write-OK "OwnYourCode v2.2.2-opencode installed successfully!"
+Write-OK "OwnYourCode v2.2.2 installed successfully!"
 Write-Host ""
 
 Write-Info "What was created:"

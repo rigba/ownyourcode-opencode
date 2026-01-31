@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <sub>v2.2.2-opencode · MIT License</sub>
+  <sub>v2.2.3-opencode · MIT License</sub>
 </p>
 
 ---

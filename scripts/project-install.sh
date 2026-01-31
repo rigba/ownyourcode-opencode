@@ -2,7 +2,7 @@
 
 # OwnYourCode Project Installation Script (OpenCode Version)
 # AI-Mentored Development for Juniors
-# Version 2.2.2-opencode
+# Version 2.2.3-opencode
 
 set -e
 
@@ -27,7 +27,7 @@ error() { echo -e "${RED}[ERROR]${NC} $1"; exit 1; }
 # Header
 echo ""
 echo -e "${GREEN}╔═══════════════════════════════════════════════════════════╗${NC}"
-echo -e "${GREEN}║     OwnYourCode Installation v2.2.2 (OpenCode Version)    ║${NC}"
+echo -e "${GREEN}║     OwnYourCode Installation v2.2.3 (OpenCode Version)    ║${NC}"
 echo -e "${GREEN}║       AI-Mentored Spec-Driven Development Engine          ║${NC}"
 echo -e "${GREEN}╚═══════════════════════════════════════════════════════════╝${NC}"
 echo ""
@@ -300,11 +300,10 @@ fi
 
 echo ""
 echo -e "${GREEN}╔═══════════════════════════════════════════════════════════╗${NC}"
-echo -e "${GREEN}║   Installation Complete! v2.2.2-opencode                  ║${NC}"
+echo -e "${GREEN}║   Installation Complete! v2.2.3-opencode                  ║${NC}"
 echo -e "${GREEN}╚═══════════════════════════════════════════════════════════╝${NC}"
-echo ""
 
-success "OwnYourCode v2.2.2-opencode installed successfully!"
+success "OwnYourCode v2.2.3-opencode installed successfully!"
 echo ""
 
 info "What was created:"

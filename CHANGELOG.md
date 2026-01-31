@@ -1,6 +1,19 @@
 # Changelog
 
 All notable changes to OwnYourCode will be documented in this file.
+---
+
+## [2.2.3] - 2026-01-31
+
+### Fixed
+
+**Version Accuracy in /own:init**
+- Stack recommendations now show verified versions with source attribution
+- Existing projects: versions read directly from package.json (source of truth)
+- New projects: versions verified via MCP, or show "Verify at [docs URL]" if unavailable
+- Added Source column to stack.md template (package.json / MCP verified / Verify at URL)
+- Added Version Freshness section to remind users when to re-verify
+- Prevents outdated version numbers (e.g., "React 18+") from appearing in generated docs
 
 ---
 
@@ -15,7 +28,6 @@ All notable changes to OwnYourCode will be documented in this file.
 - Updated all installation scripts for OpenCode paths
 - Updated MCP commands from `claude mcp add` to `opencode mcp add`
 - Updated all documentation references
-
 ---
 
 ## [2.2.2] - 2026-01-30
