@@ -347,5 +347,5 @@ echo "  OctoCode:  https://octocode.ai/#installation"
 echo ""
 
 info "To remove OwnYourCode later:"
-echo "  ~/ownyourcode/scripts/project-uninstall.sh"
+info "  ~/ownyourcode/scripts/project-uninstall.sh"
 echo ""
