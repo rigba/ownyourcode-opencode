@@ -1,6 +1,6 @@
-# OwnYourCode Project Installation Script (Windows)
+# OwnYourCode Project Installation Script (Windows - OpenCode Version)
 # AI-Mentored Development for Juniors
-# Version 2.2.2
+# Version 2.2.2-opencode
 
 $ErrorActionPreference = "Stop"
 
@@ -18,7 +18,7 @@ function Write-Err { param($msg) Write-Host "[ERROR] $msg" -ForegroundColor Red;
 # Header
 Write-Host ""
 Write-Host "╔═══════════════════════════════════════════════════════════╗" -ForegroundColor Green
-Write-Host "║            OwnYourCode Installation v2.2.2                ║" -ForegroundColor Green
+Write-Host "║     OwnYourCode Installation v2.2.2 (OpenCode Version)    ║" -ForegroundColor Green
 Write-Host "║       AI-Mentored Spec-Driven Development Engine          ║" -ForegroundColor Green
 Write-Host "╚═══════════════════════════════════════════════════════════╝" -ForegroundColor Green
 Write-Host ""
@@ -58,29 +58,29 @@ $directories = @(
     "ownyourcode/specs/completed",
     "ownyourcode/career/stories",
     "ownyourcode/guides",
-    ".claude/commands/own",
-    ".claude/skills/fundamentals/frontend",
-    ".claude/skills/fundamentals/backend",
-    ".claude/skills/fundamentals/security",
-    ".claude/skills/fundamentals/performance",
-    ".claude/skills/fundamentals/error-handling",
-    ".claude/skills/fundamentals/engineering",
-    ".claude/skills/fundamentals/database",
-    ".claude/skills/fundamentals/testing",
-    ".claude/skills/fundamentals/seo",
-    ".claude/skills/fundamentals/accessibility",
-    ".claude/skills/fundamentals/documentation",
-    ".claude/skills/fundamentals/debugging",
-    ".claude/skills/fundamentals/resistance",
-    ".claude/skills/gates/ownership",
-    ".claude/skills/gates/security",
-    ".claude/skills/gates/error",
-    ".claude/skills/gates/performance",
-    ".claude/skills/gates/fundamentals",
-    ".claude/skills/gates/testing",
-    ".claude/skills/career/star-stories",
-    ".claude/skills/career/resume-bullets",
-    ".claude/skills/learned"
+    ".opencode/commands/own",
+    ".opencode/skills/fundamentals/frontend",
+    ".opencode/skills/fundamentals/backend",
+    ".opencode/skills/fundamentals/security",
+    ".opencode/skills/fundamentals/performance",
+    ".opencode/skills/fundamentals/error-handling",
+    ".opencode/skills/fundamentals/engineering",
+    ".opencode/skills/fundamentals/database",
+    ".opencode/skills/fundamentals/testing",
+    ".opencode/skills/fundamentals/seo",
+    ".opencode/skills/fundamentals/accessibility",
+    ".opencode/skills/fundamentals/documentation",
+    ".opencode/skills/fundamentals/debugging",
+    ".opencode/skills/fundamentals/resistance",
+    ".opencode/skills/gates/ownership",
+    ".opencode/skills/gates/security",
+    ".opencode/skills/gates/error",
+    ".opencode/skills/gates/performance",
+    ".opencode/skills/gates/fundamentals",
+    ".opencode/skills/gates/testing",
+    ".opencode/skills/career/star-stories",
+    ".opencode/skills/career/resume-bullets",
+    ".opencode/skills/learned"
 )
 
 foreach ($dir in $directories) {
@@ -91,53 +91,53 @@ foreach ($dir in $directories) {
 Write-OK "Directories created"
 
 # ============================================================================
-# STEP 3: Handle CLAUDE.md (Smart Merge)
+# STEP 3: Handle opencode.md (Smart Merge)
 # ============================================================================
 
-$CLAUDE_MD = Join-Path $PROJECT_DIR ".claude/CLAUDE.md"
-$TEMPLATE = Join-Path $BASE_DIR "core/CLAUDE.md.template"
+$OPENCODE_MD = Join-Path $PROJECT_DIR ".opencode/opencode.md"
+$TEMPLATE = Join-Path $BASE_DIR "core/opencode.md.template"
 
-Write-Info "Configuring CLAUDE.md..."
+Write-Info "Configuring opencode.md..."
 
-if (Test-Path $CLAUDE_MD) {
-    $content = Get-Content $CLAUDE_MD -Raw
+if (Test-Path $OPENCODE_MD) {
+    $content = Get-Content $OPENCODE_MD -Raw
 
     if ($content -match "OWNYOURCODE:") {
-        Write-Warn "OwnYourCode section already exists in CLAUDE.md"
+        Write-Warn "OwnYourCode section already exists in opencode.md"
         $replace = Read-Host "Replace existing OwnYourCode section? [y/N]"
 
         if (($replace -eq "y" -or $replace -eq "Y") -and (Test-Path $TEMPLATE)) {
             # Remove existing section and append fresh
             $cleaned = $content -replace "# ═.*OWNYOURCODE[\s\S]*?# ═.*END OWNYOURCODE[^\n]*", ""
             $templateContent = Get-Content $TEMPLATE -Raw
-            Set-Content -Path $CLAUDE_MD -Value ($cleaned.Trim() + "`n`n" + $templateContent)
+            Set-Content -Path $OPENCODE_MD -Value ($cleaned.Trim() + "`n`n" + $templateContent)
             Write-OK "OwnYourCode section replaced"
         } else {
             Write-Info "Keeping existing OwnYourCode section"
         }
     } else {
-        # Existing CLAUDE.md without OwnYourCode - merge
-        Write-Info "Found existing CLAUDE.md - merging..."
+        # Existing opencode.md without OwnYourCode - merge
+        Write-Info "Found existing opencode.md - merging..."
 
         # Backup
-        $backupPath = Join-Path $PROJECT_DIR ".claude/CLAUDE.md.pre-ownyourcode"
-        Copy-Item $CLAUDE_MD $backupPath
-        Write-OK "Backed up to CLAUDE.md.pre-ownyourcode"
+        $backupPath = Join-Path $PROJECT_DIR ".opencode/opencode.md.pre-ownyourcode"
+        Copy-Item $OPENCODE_MD $backupPath
+        Write-OK "Backed up to opencode.md.pre-ownyourcode"
 
         # Append template
         if (Test-Path $TEMPLATE) {
             $templateContent = Get-Content $TEMPLATE -Raw
-            Add-Content -Path $CLAUDE_MD -Value ("`n`n" + $templateContent)
-            Write-OK "OwnYourCode section merged into CLAUDE.md"
+            Add-Content -Path $OPENCODE_MD -Value ("`n`n" + $templateContent)
+            Write-OK "OwnYourCode section merged into opencode.md"
         }
     }
 } else {
-    # No existing CLAUDE.md - create fresh
+    # No existing opencode.md - create fresh
     if (Test-Path $TEMPLATE) {
-        $claudeDir = Join-Path $PROJECT_DIR ".claude"
-        New-Item -ItemType Directory -Force -Path $claudeDir | Out-Null
-        Copy-Item $TEMPLATE $CLAUDE_MD
-        Write-OK "Created CLAUDE.md with THE STRICTNESS"
+        $opencodeDir = Join-Path $PROJECT_DIR ".opencode"
+        New-Item -ItemType Directory -Force -Path $opencodeDir | Out-Null
+        Copy-Item $TEMPLATE $OPENCODE_MD
+        Write-OK "Created opencode.md with THE STRICTNESS"
     }
 }
 
@@ -147,8 +147,8 @@ if (Test-Path $CLAUDE_MD) {
 
 Write-Info "Installing commands..."
 
-$srcCommands = Join-Path $BASE_DIR ".claude/commands/own"
-$destCommands = Join-Path $PROJECT_DIR ".claude/commands/own"
+$srcCommands = Join-Path $BASE_DIR ".opencode/commands/own"
+$destCommands = Join-Path $PROJECT_DIR ".opencode/commands/own"
 
 if (Test-Path $srcCommands) {
     $files = Get-ChildItem -Path $srcCommands -Filter "*.md"
@@ -176,8 +176,8 @@ $fundamentals = @(
 
 $fundamentalCount = 0
 foreach ($skill in $fundamentals) {
-    $src = Join-Path $BASE_DIR ".claude/skills/fundamentals/$skill/SKILL.md"
-    $dest = Join-Path $PROJECT_DIR ".claude/skills/fundamentals/$skill/SKILL.md"
+    $src = Join-Path $BASE_DIR ".opencode/skills/fundamentals/$skill/SKILL.md"
+    $dest = Join-Path $PROJECT_DIR ".opencode/skills/fundamentals/$skill/SKILL.md"
     if (Test-Path $src) {
         Copy-Item $src $dest -Force
         $fundamentalCount++
@@ -189,8 +189,8 @@ Write-OK "Fundamental skills installed: $fundamentalCount"
 $gates = @("ownership", "security", "error", "performance", "fundamentals", "testing")
 $gateCount = 0
 foreach ($gate in $gates) {
-    $src = Join-Path $BASE_DIR ".claude/skills/gates/$gate/SKILL.md"
-    $dest = Join-Path $PROJECT_DIR ".claude/skills/gates/$gate/SKILL.md"
+    $src = Join-Path $BASE_DIR ".opencode/skills/gates/$gate/SKILL.md"
+    $dest = Join-Path $PROJECT_DIR ".opencode/skills/gates/$gate/SKILL.md"
     if (Test-Path $src) {
         Copy-Item $src $dest -Force
         $gateCount++
@@ -201,8 +201,8 @@ Write-OK "Gate skills installed: $gateCount"
 # Career
 $careerSkills = @("star-stories", "resume-bullets")
 foreach ($skill in $careerSkills) {
-    $src = Join-Path $BASE_DIR ".claude/skills/career/$skill/SKILL.md"
-    $dest = Join-Path $PROJECT_DIR ".claude/skills/career/$skill/SKILL.md"
+    $src = Join-Path $BASE_DIR ".opencode/skills/career/$skill/SKILL.md"
+    $dest = Join-Path $PROJECT_DIR ".opencode/skills/career/$skill/SKILL.md"
     if (Test-Path $src) {
         Copy-Item $src $dest -Force
     }
@@ -210,7 +210,7 @@ foreach ($skill in $careerSkills) {
 Write-OK "Career extraction skills installed"
 
 # Create .gitkeep for learned
-$gitkeepPath = Join-Path $PROJECT_DIR ".claude/skills/learned/.gitkeep"
+$gitkeepPath = Join-Path $PROJECT_DIR ".opencode/skills/learned/.gitkeep"
 Set-Content -Path $gitkeepPath -Value "# Auto-generated skills go here - from /own:retro"
 
 # ============================================================================
@@ -335,11 +335,11 @@ if (Test-Path $gitignorePath) {
 
 Write-Host ""
 Write-Host "╔═══════════════════════════════════════════════════════════╗" -ForegroundColor Green
-Write-Host "║          Installation Complete! v2.2.2                    ║" -ForegroundColor Green
+Write-Host "║   Installation Complete! v2.2.2-opencode                  ║" -ForegroundColor Green
 Write-Host "╚═══════════════════════════════════════════════════════════╝" -ForegroundColor Green
 Write-Host ""
 
-Write-OK "OwnYourCode v2.2.2 installed successfully!"
+Write-OK "OwnYourCode v2.2.2-opencode installed successfully!"
 Write-Host ""
 
 Write-Info "What was created:"
@@ -350,8 +350,8 @@ Write-Host "     ├── specs/               — Feature specifications"
 Write-Host "     ├── career/              — Interview stories & bullets"
 Write-Host "     └── guides/              — Setup guides"
 Write-Host ""
-Write-Host "  📁 .claude/                 — Claude Code configuration"
-Write-Host "     ├── CLAUDE.md            — THE STRICTNESS [mentor behavior]"
+Write-Host "  📁 .opencode/               — OpenCode configuration"
+Write-Host "     ├── opencode.md          — THE STRICTNESS [mentor behavior]"
 Write-Host "     ├── commands/            — Slash commands"
 Write-Host "     └── skills/              — Auto-invoked mentorship skills"
 Write-Host "         ├── fundamentals/    — Core review skills"
@@ -366,7 +366,7 @@ Write-Host "     └── failures/            — Documented anti-patterns"
 Write-Host ""
 
 Write-Info "Next steps:"
-Write-Host "  1. Open Claude Code in this project"
+Write-Host "  1. Open OpenCode in this project"
 Write-Host "  2. Run: /own:init"
 Write-Host ""
 Write-Info "The workflow:"
@@ -378,10 +378,10 @@ Write-Host "  /own:retro    ->  Capture what you learned"
 Write-Host ""
 
 Write-Info "MCP Setup [recommended]:"
-Write-Host "  Context7:  claude mcp add context7 --transport http https://mcp.context7.com/mcp"
+Write-Host "  Context7:  opencode mcp add context7 --transport http https://mcp.context7.com/mcp"
 Write-Host "  OctoCode:  https://octocode.ai/#installation"
 Write-Host ""
 
 Write-Info "To remove OwnYourCode later:"
-Write-Host "  irm https://raw.githubusercontent.com/DanielPodolsky/ownyourcode/main/scripts/project-uninstall.ps1 | iex"
+Write-Host "  irm https://raw.githubusercontent.com/james/ownyourcode-opencode/main/scripts/project-uninstall.ps1 | iex"
 Write-Host ""

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# OwnYourCode Project Uninstallation Script
+# OwnYourCode Project Uninstallation Script (OpenCode Version)
 # Cleanly removes OwnYourCode from a project
 
 set -e
@@ -14,8 +14,8 @@ NC='\033[0m'
 
 # Paths
 PROJECT_DIR=$(pwd)
-CLAUDE_MD="$PROJECT_DIR/.claude/CLAUDE.md"
-BACKUP="$PROJECT_DIR/.claude/CLAUDE.md.pre-ownyourcode"
+OPENCODE_MD="$PROJECT_DIR/.opencode/opencode.md"
+BACKUP="$PROJECT_DIR/.opencode/opencode.md.pre-ownyourcode"
 
 # Helpers
 info() { echo -e "${BLUE}[INFO]${NC} $1"; }
@@ -26,7 +26,7 @@ error() { echo -e "${RED}[ERROR]${NC} $1"; exit 1; }
 # Header
 echo ""
 echo -e "${RED}╔═══════════════════════════════════════════════════════╗${NC}"
-echo -e "${RED}║            OwnYourCode Uninstallation                  ║${NC}"
+echo -e "${RED}║     OwnYourCode Uninstallation (OpenCode Version)     ║${NC}"
 echo -e "${RED}╚═══════════════════════════════════════════════════════╝${NC}"
 echo ""
 
@@ -34,7 +34,7 @@ echo ""
 # STEP 0: Check if OwnYourCode is installed
 # ============================================================================
 
-if [ ! -d "$PROJECT_DIR/ownyourcode" ] && [ ! -d "$PROJECT_DIR/.claude/commands/own" ]; then
+if [ ! -d "$PROJECT_DIR/ownyourcode" ] && [ ! -d "$PROJECT_DIR/.opencode/commands/own" ]; then
     warn "OwnYourCode does not appear to be installed in this project."
     exit 0
 fi
@@ -47,8 +47,8 @@ info "This will remove OwnYourCode from: $PROJECT_DIR"
 echo ""
 echo "  Will remove:"
 echo "    - ownyourcode/ folder"
-echo "    - .claude/commands/own/"
-echo "    - OwnYourCode section from CLAUDE.md"
+echo "    - .opencode/commands/own/"
+echo "    - OwnYourCode section from opencode.md"
 echo ""
 
 read -p "Continue? (y/N): " confirm
@@ -60,38 +60,38 @@ fi
 echo ""
 
 # ============================================================================
-# STEP 2: Handle CLAUDE.md
+# STEP 2: Handle opencode.md
 # ============================================================================
 
-info "Restoring CLAUDE.md..."
+info "Restoring opencode.md..."
 
-if [ -f "$CLAUDE_MD" ]; then
+if [ -f "$OPENCODE_MD" ]; then
     if [ -f "$BACKUP" ]; then
         # Restore from backup
-        cp "$BACKUP" "$CLAUDE_MD"
+        cp "$BACKUP" "$OPENCODE_MD"
         rm "$BACKUP"
-        success "Restored original CLAUDE.md from backup"
-    elif grep -q "OWNYOURCODE:" "$CLAUDE_MD" 2>/dev/null; then
+        success "Restored original opencode.md from backup"
+    elif grep -q "OWNYOURCODE:" "$OPENCODE_MD" 2>/dev/null; then
         # Remove OwnYourCode section using markers
         # Create temp file without OwnYourCode section
-        sed '/# ═.*OWNYOURCODE/,/# ═.*END OWNYOURCODE/d' "$CLAUDE_MD" > "$CLAUDE_MD.tmp"
+        sed '/# ═.*OWNYOURCODE/,/# ═.*END OWNYOURCODE/d' "$OPENCODE_MD" > "$OPENCODE_MD.tmp"
 
         # Remove trailing blank lines
-        sed -e :a -e '/^\n*$/{$d;N;ba' -e '}' "$CLAUDE_MD.tmp" > "$CLAUDE_MD"
-        rm "$CLAUDE_MD.tmp"
+        sed -e :a -e '/^\n*$/{$d;N;ba' -e '}' "$OPENCODE_MD.tmp" > "$OPENCODE_MD"
+        rm "$OPENCODE_MD.tmp"
 
-        # Check if CLAUDE.md is now empty (only whitespace)
-        if [ ! -s "$CLAUDE_MD" ] || [ -z "$(grep -v '^[[:space:]]*$' "$CLAUDE_MD")" ]; then
-            rm "$CLAUDE_MD"
-            success "Removed CLAUDE.md (was only OwnYourCode content)"
+        # Check if opencode.md is now empty (only whitespace)
+        if [ ! -s "$OPENCODE_MD" ] || [ -z "$(grep -v '^[[:space:]]*$' "$OPENCODE_MD")" ]; then
+            rm "$OPENCODE_MD"
+            success "Removed opencode.md (was only OwnYourCode content)"
         else
-            success "Removed OwnYourCode section from CLAUDE.md"
+            success "Removed OwnYourCode section from opencode.md"
         fi
     else
-        info "No OwnYourCode section found in CLAUDE.md"
+        info "No OwnYourCode section found in opencode.md"
     fi
 else
-    info "No CLAUDE.md found"
+    info "No opencode.md found"
 fi
 
 # ============================================================================
@@ -100,22 +100,22 @@ fi
 
 info "Removing commands..."
 
-if [ -d "$PROJECT_DIR/.claude/commands/own" ]; then
-    rm -rf "$PROJECT_DIR/.claude/commands/own"
-    success "Removed .claude/commands/own/"
+if [ -d "$PROJECT_DIR/.opencode/commands/own" ]; then
+    rm -rf "$PROJECT_DIR/.opencode/commands/own"
+    success "Removed .opencode/commands/own/"
 else
     info "No commands folder found"
 fi
 
 # Clean up empty directories
-if [ -d "$PROJECT_DIR/.claude/commands" ] && [ -z "$(ls -A "$PROJECT_DIR/.claude/commands")" ]; then
-    rmdir "$PROJECT_DIR/.claude/commands"
-    info "Removed empty .claude/commands/"
+if [ -d "$PROJECT_DIR/.opencode/commands" ] && [ -z "$(ls -A "$PROJECT_DIR/.opencode/commands")" ]; then
+    rmdir "$PROJECT_DIR/.opencode/commands"
+    info "Removed empty .opencode/commands/"
 fi
 
-if [ -d "$PROJECT_DIR/.claude" ] && [ -z "$(ls -A "$PROJECT_DIR/.claude")" ]; then
-    rmdir "$PROJECT_DIR/.claude"
-    info "Removed empty .claude/"
+if [ -d "$PROJECT_DIR/.opencode" ] && [ -z "$(ls -A "$PROJECT_DIR/.opencode")" ]; then
+    rmdir "$PROJECT_DIR/.opencode"
+    info "Removed empty .opencode/"
 fi
 
 # ============================================================================

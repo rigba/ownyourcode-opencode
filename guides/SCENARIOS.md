@@ -223,19 +223,19 @@ After installation, run through these:
 ## Troubleshooting
 
 **Mentor is too lenient:**
-- Check that CLAUDE.md was properly installed in `.claude/`
+- Check that opencode.md was properly installed in `.opencode/`
 - Verify the Anti-Brain-Rot Rules are present
-- Run `cat .claude/CLAUDE.md | grep "OWNYOURCODE"` to confirm
+- Run `cat .opencode/opencode.md | grep "OWNYOURCODE"` to confirm
 
 **Commands not working:**
-- Ensure commands are in `.claude/commands/ownyourcode/`
+- Ensure commands are in `.opencode/commands/own/`
 - Try `/own:status` first
-- Check Claude Code is running in the project directory
+- Check OpenCode is running in the project directory
 
 **Learning Flywheel not working:**
 - Verify `learning/LEARNING_REGISTRY.md` exists
 - Run `/own:retro` at least once
-- Check `.claude/skills/learned/` for auto-generated skills
+- Check `.opencode/skills/learned/` for auto-generated skills
 
 ---
 

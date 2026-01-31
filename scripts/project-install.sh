@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# OwnYourCode Project Installation Script
+# OwnYourCode Project Installation Script (OpenCode Version)
 # AI-Mentored Development for Juniors
-# Version 2.2.2
+# Version 2.2.2-opencode
 
 set -e
 
@@ -27,7 +27,7 @@ error() { echo -e "${RED}[ERROR]${NC} $1"; exit 1; }
 # Header
 echo ""
 echo -e "${GREEN}╔═══════════════════════════════════════════════════════════╗${NC}"
-echo -e "${GREEN}║            OwnYourCode Installation v2.2.2                 ║${NC}"
+echo -e "${GREEN}║     OwnYourCode Installation v2.2.2 (OpenCode Version)    ║${NC}"
 echo -e "${GREEN}║       AI-Mentored Spec-Driven Development Engine          ║${NC}"
 echo -e "${GREEN}╚═══════════════════════════════════════════════════════════╝${NC}"
 echo ""
@@ -67,78 +67,78 @@ mkdir -p "$PROJECT_DIR/ownyourcode/specs/completed"
 mkdir -p "$PROJECT_DIR/ownyourcode/career/stories"
 mkdir -p "$PROJECT_DIR/ownyourcode/guides"
 
-# Claude Code directories (v2.0 - Skill-Driven)
-mkdir -p "$PROJECT_DIR/.claude/commands/own"
-mkdir -p "$PROJECT_DIR/.claude/skills/fundamentals/frontend"
-mkdir -p "$PROJECT_DIR/.claude/skills/fundamentals/backend"
-mkdir -p "$PROJECT_DIR/.claude/skills/fundamentals/security"
-mkdir -p "$PROJECT_DIR/.claude/skills/fundamentals/performance"
-mkdir -p "$PROJECT_DIR/.claude/skills/fundamentals/error-handling"
-mkdir -p "$PROJECT_DIR/.claude/skills/fundamentals/engineering"
-mkdir -p "$PROJECT_DIR/.claude/skills/fundamentals/database"
-mkdir -p "$PROJECT_DIR/.claude/skills/fundamentals/testing"
-mkdir -p "$PROJECT_DIR/.claude/skills/fundamentals/seo"
-mkdir -p "$PROJECT_DIR/.claude/skills/fundamentals/accessibility"
-mkdir -p "$PROJECT_DIR/.claude/skills/fundamentals/documentation"
-mkdir -p "$PROJECT_DIR/.claude/skills/fundamentals/debugging"
-mkdir -p "$PROJECT_DIR/.claude/skills/fundamentals/resistance"
-mkdir -p "$PROJECT_DIR/.claude/skills/gates/ownership"
-mkdir -p "$PROJECT_DIR/.claude/skills/gates/security"
-mkdir -p "$PROJECT_DIR/.claude/skills/gates/error"
-mkdir -p "$PROJECT_DIR/.claude/skills/gates/performance"
-mkdir -p "$PROJECT_DIR/.claude/skills/gates/fundamentals"
-mkdir -p "$PROJECT_DIR/.claude/skills/gates/testing"
-mkdir -p "$PROJECT_DIR/.claude/skills/career/star-stories"
-mkdir -p "$PROJECT_DIR/.claude/skills/career/resume-bullets"
-mkdir -p "$PROJECT_DIR/.claude/skills/learned"
+# OpenCode directories (v2.0 - Skill-Driven)
+mkdir -p "$PROJECT_DIR/.opencode/commands/own"
+mkdir -p "$PROJECT_DIR/.opencode/skills/fundamentals/frontend"
+mkdir -p "$PROJECT_DIR/.opencode/skills/fundamentals/backend"
+mkdir -p "$PROJECT_DIR/.opencode/skills/fundamentals/security"
+mkdir -p "$PROJECT_DIR/.opencode/skills/fundamentals/performance"
+mkdir -p "$PROJECT_DIR/.opencode/skills/fundamentals/error-handling"
+mkdir -p "$PROJECT_DIR/.opencode/skills/fundamentals/engineering"
+mkdir -p "$PROJECT_DIR/.opencode/skills/fundamentals/database"
+mkdir -p "$PROJECT_DIR/.opencode/skills/fundamentals/testing"
+mkdir -p "$PROJECT_DIR/.opencode/skills/fundamentals/seo"
+mkdir -p "$PROJECT_DIR/.opencode/skills/fundamentals/accessibility"
+mkdir -p "$PROJECT_DIR/.opencode/skills/fundamentals/documentation"
+mkdir -p "$PROJECT_DIR/.opencode/skills/fundamentals/debugging"
+mkdir -p "$PROJECT_DIR/.opencode/skills/fundamentals/resistance"
+mkdir -p "$PROJECT_DIR/.opencode/skills/gates/ownership"
+mkdir -p "$PROJECT_DIR/.opencode/skills/gates/security"
+mkdir -p "$PROJECT_DIR/.opencode/skills/gates/error"
+mkdir -p "$PROJECT_DIR/.opencode/skills/gates/performance"
+mkdir -p "$PROJECT_DIR/.opencode/skills/gates/fundamentals"
+mkdir -p "$PROJECT_DIR/.opencode/skills/gates/testing"
+mkdir -p "$PROJECT_DIR/.opencode/skills/career/star-stories"
+mkdir -p "$PROJECT_DIR/.opencode/skills/career/resume-bullets"
+mkdir -p "$PROJECT_DIR/.opencode/skills/learned"
 
 # Note: Learning is GLOBAL at ~/ownyourcode/learning/ (not project-local)
 
 success "Directories created"
 
 # ============================================================================
-# STEP 3: Handle CLAUDE.md (Smart Merge)
+# STEP 3: Handle opencode.md (Smart Merge)
 # ============================================================================
 
-CLAUDE_MD="$PROJECT_DIR/.claude/CLAUDE.md"
-TEMPLATE="$BASE_DIR/core/CLAUDE.md.template"
+OPENCODE_MD="$PROJECT_DIR/.opencode/opencode.md"
+TEMPLATE="$BASE_DIR/core/opencode.md.template"
 
-info "Configuring CLAUDE.md..."
+info "Configuring opencode.md..."
 
-if [ -f "$CLAUDE_MD" ]; then
+if [ -f "$OPENCODE_MD" ]; then
     # Check if OwnYourCode already installed
-    if grep -q "OWNYOURCODE:" "$CLAUDE_MD" 2>/dev/null; then
-        warn "OwnYourCode section already exists in CLAUDE.md"
+    if grep -q "OWNYOURCODE:" "$OPENCODE_MD" 2>/dev/null; then
+        warn "OwnYourCode section already exists in opencode.md"
         read -p "Replace existing OwnYourCode section? (y/N): " replace
         if [ "$replace" = "y" ] || [ "$replace" = "Y" ]; then
             # Remove existing OwnYourCode section
-            sed -i.bak '/# ═.*OWNYOURCODE/,/# ═.*END OWNYOURCODE/d' "$CLAUDE_MD"
+            sed -i.bak '/# ═.*OWNYOURCODE/,/# ═.*END OWNYOURCODE/d' "$OPENCODE_MD"
             # Append fresh template
-            echo "" >> "$CLAUDE_MD"
-            cat "$TEMPLATE" >> "$CLAUDE_MD"
+            echo "" >> "$OPENCODE_MD"
+            cat "$TEMPLATE" >> "$OPENCODE_MD"
             success "OwnYourCode section replaced"
         else
             info "Keeping existing OwnYourCode section"
         fi
     else
-        # Existing CLAUDE.md without OwnYourCode - Smart merge
-        info "Found existing CLAUDE.md - merging..."
+        # Existing opencode.md without OwnYourCode - Smart merge
+        info "Found existing opencode.md - merging..."
 
         # Backup original
-        cp "$CLAUDE_MD" "$PROJECT_DIR/.claude/CLAUDE.md.pre-ownyourcode"
-        success "Backed up to CLAUDE.md.pre-ownyourcode"
+        cp "$OPENCODE_MD" "$PROJECT_DIR/.opencode/opencode.md.pre-ownyourcode"
+        success "Backed up to opencode.md.pre-ownyourcode"
 
         # Append OwnYourCode section
-        echo "" >> "$CLAUDE_MD"
-        echo "" >> "$CLAUDE_MD"
-        cat "$TEMPLATE" >> "$CLAUDE_MD"
-        success "OwnYourCode section merged into CLAUDE.md"
+        echo "" >> "$OPENCODE_MD"
+        echo "" >> "$OPENCODE_MD"
+        cat "$TEMPLATE" >> "$OPENCODE_MD"
+        success "OwnYourCode section merged into opencode.md"
     fi
 else
-    # No existing CLAUDE.md - create fresh
-    mkdir -p "$PROJECT_DIR/.claude"
-    cp "$TEMPLATE" "$CLAUDE_MD"
-    success "Created CLAUDE.md with THE STRICTNESS"
+    # No existing opencode.md - create fresh
+    mkdir -p "$PROJECT_DIR/.opencode"
+    cp "$TEMPLATE" "$OPENCODE_MD"
+    success "Created opencode.md with THE STRICTNESS"
 fi
 
 # ============================================================================
@@ -147,8 +147,8 @@ fi
 
 info "Installing commands..."
 
-# Copy commands from .claude/commands/own/
-cp "$BASE_DIR/.claude/commands/own/"*.md "$PROJECT_DIR/.claude/commands/own/" 2>/dev/null || true
+# Copy commands from .opencode/commands/own/
+cp "$BASE_DIR/.opencode/commands/own/"*.md "$PROJECT_DIR/.opencode/commands/own/" 2>/dev/null || true
 success "Commands installed (10 commands including test/docs)"
 
 # ============================================================================
@@ -158,40 +158,40 @@ success "Commands installed (10 commands including test/docs)"
 info "Installing skills..."
 
 # Copy fundamentals
-if [ -d "$BASE_DIR/.claude/skills/fundamentals" ]; then
+if [ -d "$BASE_DIR/.opencode/skills/fundamentals" ]; then
     for skill in frontend backend security performance error-handling engineering database testing seo accessibility documentation debugging resistance; do
-        if [ -f "$BASE_DIR/.claude/skills/fundamentals/$skill/SKILL.md" ]; then
-            cp "$BASE_DIR/.claude/skills/fundamentals/$skill/SKILL.md" \
-               "$PROJECT_DIR/.claude/skills/fundamentals/$skill/"
+        if [ -f "$BASE_DIR/.opencode/skills/fundamentals/$skill/SKILL.md" ]; then
+            cp "$BASE_DIR/.opencode/skills/fundamentals/$skill/SKILL.md" \
+               "$PROJECT_DIR/.opencode/skills/fundamentals/$skill/"
         fi
     done
     success "13 Core Fundamental skills installed"
 fi
 
 # Copy gates
-if [ -d "$BASE_DIR/.claude/skills/gates" ]; then
+if [ -d "$BASE_DIR/.opencode/skills/gates" ]; then
     for gate in ownership security error performance fundamentals testing; do
-        if [ -f "$BASE_DIR/.claude/skills/gates/$gate/SKILL.md" ]; then
-            cp "$BASE_DIR/.claude/skills/gates/$gate/SKILL.md" \
-               "$PROJECT_DIR/.claude/skills/gates/$gate/"
+        if [ -f "$BASE_DIR/.opencode/skills/gates/$gate/SKILL.md" ]; then
+            cp "$BASE_DIR/.opencode/skills/gates/$gate/SKILL.md" \
+               "$PROJECT_DIR/.opencode/skills/gates/$gate/"
         fi
     done
     success "6 Mentorship Gate skills installed"
 fi
 
 # Copy career skills
-if [ -d "$BASE_DIR/.claude/skills/career" ]; then
+if [ -d "$BASE_DIR/.opencode/skills/career" ]; then
     for career in star-stories resume-bullets; do
-        if [ -f "$BASE_DIR/.claude/skills/career/$career/SKILL.md" ]; then
-            cp "$BASE_DIR/.claude/skills/career/$career/SKILL.md" \
-               "$PROJECT_DIR/.claude/skills/career/$career/"
+        if [ -f "$BASE_DIR/.opencode/skills/career/$career/SKILL.md" ]; then
+            cp "$BASE_DIR/.opencode/skills/career/$career/SKILL.md" \
+               "$PROJECT_DIR/.opencode/skills/career/$career/"
         fi
     done
     success "Career extraction skills installed"
 fi
 
 # Create .gitkeep for learned skills
-echo "# Auto-generated skills go here (from /own:retro)" > "$PROJECT_DIR/.claude/skills/learned/.gitkeep"
+echo "# Auto-generated skills go here (from /own:retro)" > "$PROJECT_DIR/.opencode/skills/learned/.gitkeep"
 
 # ============================================================================
 # STEP 6: Learning Registry Note (v2.1 - Global Learning)
@@ -300,11 +300,11 @@ fi
 
 echo ""
 echo -e "${GREEN}╔═══════════════════════════════════════════════════════════╗${NC}"
-echo -e "${GREEN}║          Installation Complete! v2.2.2                    ║${NC}"
+echo -e "${GREEN}║   Installation Complete! v2.2.2-opencode                  ║${NC}"
 echo -e "${GREEN}╚═══════════════════════════════════════════════════════════╝${NC}"
 echo ""
 
-success "OwnYourCode v2.2.2 installed successfully!"
+success "OwnYourCode v2.2.2-opencode installed successfully!"
 echo ""
 
 info "What was created:"
@@ -315,8 +315,8 @@ echo "     ├── specs/               — Feature specifications"
 echo "     ├── career/              — Interview stories & bullets"
 echo "     └── guides/              — Setup guides"
 echo ""
-echo "  📁 .claude/                 — Claude Code configuration"
-echo "     ├── CLAUDE.md            — THE STRICTNESS (mentor behavior)"
+echo "  📁 .opencode/               — OpenCode configuration"
+echo "     ├── opencode.md          — THE STRICTNESS (mentor behavior)"
 echo "     ├── commands/            — 10 slash commands"
 echo "     └── skills/              — Auto-invoked mentorship skills"
 echo "         ├── fundamentals/    — 13 Core review skills"
@@ -331,7 +331,7 @@ echo "     └── failures/            — Documented anti-patterns"
 echo ""
 
 info "Next steps:"
-echo "  1. Open Claude Code in this project"
+echo "  1. Open OpenCode in this project"
 echo "  2. Run: /own:init"
 echo ""
 info "The workflow:"
@@ -343,7 +343,7 @@ echo "  /own:retro    →  Capture what you learned"
 echo ""
 
 info "MCP Setup (recommended):"
-echo "  Context7:  claude mcp add context7 --transport http https://mcp.context7.com/mcp"
+echo "  Context7:  opencode mcp add context7 --transport http https://mcp.context7.com/mcp"
 echo "  OctoCode:  https://octocode.ai/#installation"
 echo ""
 

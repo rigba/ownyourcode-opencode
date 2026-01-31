@@ -4,12 +4,26 @@ All notable changes to OwnYourCode will be documented in this file.
 
 ---
 
+## [2.2.2-opencode] - 2026-01-31
+
+### Changed
+
+**OpenCode Port**
+- Converted project from Claude Code to OpenCode compatibility
+- Renamed `.claude/` directory structure to `.opencode/`
+- Renamed `CLAUDE.md` to `opencode.md`
+- Updated all installation scripts for OpenCode paths
+- Updated MCP commands from `claude mcp add` to `opencode mcp add`
+- Updated all documentation references
+
+---
+
 ## [2.2.2] - 2026-01-30
 
 ### Changed
 
 **Repository Configuration**
-- Added `.claude/agents/` to .gitignore for personal agent files
+- Added `.opencode/agents/` to .gitignore for personal agent files
 
 ---
 
@@ -99,7 +113,7 @@ Quality improvements based on real-world testing. Learnings now persist across p
 
 - `base-install.sh` creates global learning structure
 - `project-install.sh` no longer creates local learning directories
-- CLAUDE.md.template has 5 new mandatory rules
+- opencode.md.template has 5 new mandatory rules
 - feature.md has internal skill mapping (Phase 2.5)
 - init.md has package manager detection and version verification
 

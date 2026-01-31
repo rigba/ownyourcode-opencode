@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# OwnYourCode Base Installation Script
+# OwnYourCode Base Installation Script (OpenCode Version)
 # AI-Mentored Development for Juniors
 #
-# Usage: curl -sSL https://raw.githubusercontent.com/DanielPodolsky/ownyourcode/main/scripts/base-install.sh | bash
+# Usage: curl -sSL https://raw.githubusercontent.com/james/ownyourcode-opencode/main/scripts/base-install.sh | bash
 
 set -e
 
@@ -15,7 +15,7 @@ BLUE='\033[0;34m'
 NC='\033[0m'
 
 # Config
-REPO_URL="https://github.com/DanielPodolsky/ownyourcode.git"
+REPO_URL="https://github.com/james/ownyourcode-opencode.git"
 INSTALL_DIR="$HOME/ownyourcode"
 
 # Helpers
@@ -27,7 +27,7 @@ error() { echo -e "${RED}[ERROR]${NC} $1"; exit 1; }
 # Header
 echo ""
 echo -e "${GREEN}╔═══════════════════════════════════════════════════════╗${NC}"
-echo -e "${GREEN}║            OwnYourCode Installation                    ║${NC}"
+echo -e "${GREEN}║     OwnYourCode Installation (OpenCode Version)       ║${NC}"
 echo -e "${GREEN}║      AI-Mentored Development for Juniors              ║${NC}"
 echo -e "${GREEN}╚═══════════════════════════════════════════════════════╝${NC}"
 echo ""
@@ -76,10 +76,10 @@ if [ ! -d "$INSTALL_DIR" ]; then
     else
         # Fallback to curl + unzip
         warn "git not found, downloading zip..."
-        ZIP_URL="https://github.com/DanielPodolsky/ownyourcode/archive/refs/heads/main.zip"
+        ZIP_URL="https://github.com/james/ownyourcode-opencode/archive/refs/heads/main.zip"
         curl -sSL "$ZIP_URL" -o /tmp/ownyourcode.zip
         unzip -q /tmp/ownyourcode.zip -d /tmp
-        mv /tmp/ownyourcode-main "$INSTALL_DIR"
+        mv /tmp/ownyourcode-opencode-main "$INSTALL_DIR"
         rm /tmp/ownyourcode.zip
         success "Downloaded and extracted"
     fi
@@ -171,7 +171,7 @@ echo ""
 echo "  2. Install OwnYourCode into that project:"
 echo "     ~/ownyourcode/scripts/project-install.sh"
 echo ""
-echo "  3. Open Claude Code and run:"
+echo "  3. Open OpenCode in your project and run:"
 echo "     /own:init"
 echo ""
 

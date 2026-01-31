@@ -25,7 +25,7 @@ Context7 makes this easy by:
 No local dependencies required. Just run:
 
 ```bash
-claude mcp add --transport http context7 https://mcp.context7.com/mcp
+opencode mcp add --transport http context7 https://mcp.context7.com/mcp
 ```
 
 ### Option B: Local Installation
@@ -33,7 +33,7 @@ claude mcp add --transport http context7 https://mcp.context7.com/mcp
 Requires Node.js 18+:
 
 ```bash
-claude mcp add context7 -- npx -y @upstash/context7-mcp
+opencode mcp add context7 -- npx -y @upstash/context7-mcp
 ```
 
 ---
@@ -47,14 +47,14 @@ A free tier is available without an API key. For higher rate limits:
 3. Install with the key:
 
 ```bash
-claude mcp add --transport http context7 https://mcp.context7.com/mcp --header "CONTEXT7_API_KEY: YOUR_KEY"
+opencode mcp add --transport http context7 https://mcp.context7.com/mcp --header "CONTEXT7_API_KEY: YOUR_KEY"
 ```
 
 ---
 
 ## Verify Installation
 
-After installing, restart Claude Code and run:
+After installing, restart OpenCode and run:
 
 ```
 /mcp
@@ -80,7 +80,7 @@ This ensures you're always learning from official, up-to-date sources.
 
 ### "Context7 not found"
 
-Make sure you've restarted Claude Code after installation.
+Make sure you've restarted OpenCode after installation.
 
 ### Rate limit errors
 

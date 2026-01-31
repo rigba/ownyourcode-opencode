@@ -1,13 +1,13 @@
-# OwnYourCode Base Installation Script (Windows)
+# OwnYourCode Base Installation Script (Windows - OpenCode Version)
 # AI-Mentored Development for Juniors
 #
-# Usage: irm https://raw.githubusercontent.com/DanielPodolsky/ownyourcode/main/scripts/base-install.ps1 | iex
+# Usage: irm https://raw.githubusercontent.com/james/ownyourcode-opencode/main/scripts/base-install.ps1 | iex
 
 $ErrorActionPreference = "Stop"
 
 # Config
-$REPO_URL = "https://github.com/DanielPodolsky/ownyourcode.git"
-$ZIP_URL = "https://github.com/DanielPodolsky/ownyourcode/archive/refs/heads/main.zip"
+$REPO_URL = "https://github.com/james/ownyourcode-opencode.git"
+$ZIP_URL = "https://github.com/james/ownyourcode-opencode/archive/refs/heads/main.zip"
 $INSTALL_DIR = Join-Path $env:USERPROFILE "ownyourcode"
 
 # Colors
@@ -19,7 +19,7 @@ function Write-Err { param($msg) Write-Host "[ERROR] $msg" -ForegroundColor Red;
 # Header
 Write-Host ""
 Write-Host "╔═══════════════════════════════════════════════════════╗" -ForegroundColor Green
-Write-Host "║            OwnYourCode Installation                   ║" -ForegroundColor Green
+Write-Host "║     OwnYourCode Installation (OpenCode Version)       ║" -ForegroundColor Green
 Write-Host "║      AI-Mentored Development for Juniors              ║" -ForegroundColor Green
 Write-Host "╚═══════════════════════════════════════════════════════╝" -ForegroundColor Green
 Write-Host ""
@@ -76,7 +76,7 @@ if (-not (Test-Path $INSTALL_DIR)) {
         Invoke-WebRequest -Uri $ZIP_URL -OutFile $zipPath
         Expand-Archive -Path $zipPath -DestinationPath $extractPath -Force
 
-        $extractedDir = Join-Path $extractPath "ownyourcode-main"
+        $extractedDir = Join-Path $extractPath "ownyourcode-opencode-main"
         Move-Item -Path $extractedDir -Destination $INSTALL_DIR
 
         Remove-Item $zipPath -Force
@@ -169,9 +169,9 @@ Write-Host "  1. Go to your project:"
 Write-Host "     cd your-project"
 Write-Host ""
 Write-Host "  2. Install OwnYourCode into that project:"
-Write-Host "     irm https://raw.githubusercontent.com/DanielPodolsky/ownyourcode/main/scripts/project-install.ps1 | iex"
+Write-Host "     irm https://raw.githubusercontent.com/james/ownyourcode-opencode/main/scripts/project-install.ps1 | iex"
 Write-Host ""
-Write-Host "  3. Open Claude Code and run:"
+Write-Host "  3. Open OpenCode in your project and run:"
 Write-Host "     /own:init"
 Write-Host ""
 

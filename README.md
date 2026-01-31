@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <sub>v2.2.2 · MIT License</sub>
+  <sub>v2.2.2-opencode · MIT License</sub>
 </p>
 
 ---
@@ -30,16 +30,16 @@ Junior asks AI → AI writes code → Junior copy-pastes → "It works!" → No 
 **macOS / Linux**
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/DanielPodolsky/ownyourcode/main/scripts/base-install.sh | bash
+curl -sSL https://raw.githubusercontent.com/james/ownyourcode-opencode/main/scripts/base-install.sh | bash
 cd your-project && ~/ownyourcode/scripts/project-install.sh
 ```
 
 **Windows (PowerShell)**
 
 ```powershell
-irm https://raw.githubusercontent.com/DanielPodolsky/ownyourcode/main/scripts/base-install.ps1 | iex
+irm https://raw.githubusercontent.com/james/ownyourcode-opencode/main/scripts/base-install.ps1 | iex
 cd your-project
-irm https://raw.githubusercontent.com/DanielPodolsky/ownyourcode/main/scripts/project-install.ps1 | iex
+irm https://raw.githubusercontent.com/james/ownyourcode-opencode/main/scripts/project-install.ps1 | iex
 ```
 
 **Initialize**
@@ -124,7 +124,7 @@ MCPs enhance mentorship with real-time documentation and production code example
 
 ```bash
 # Context7 — Official documentation lookup
-claude mcp add context7 --transport http https://mcp.context7.com/mcp
+opencode mcp add context7 --transport http https://mcp.context7.com/mcp
 
 # Octocode — GitHub code search
 # https://octocode.ai/#installation
