@@ -30,16 +30,16 @@ Junior asks AI → AI writes code → Junior copy-pastes → "It works!" → No 
 **macOS / Linux**
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/james/ownyourcode-opencode/main/scripts/base-install.sh | bash
+curl -sSL https://raw.githubusercontent.com/rigba/ownyourcode-opencode/main/scripts/base-install.sh | bash
 cd your-project && ~/ownyourcode/scripts/project-install.sh
 ```
 
 **Windows (PowerShell)**
 
 ```powershell
-irm https://raw.githubusercontent.com/james/ownyourcode-opencode/main/scripts/base-install.ps1 | iex
+irm https://raw.githubusercontent.com/rigba/ownyourcode-opencode/main/scripts/base-install.ps1 | iex
 cd your-project
-irm https://raw.githubusercontent.com/james/ownyourcode-opencode/main/scripts/project-install.ps1 | iex
+irm https://raw.githubusercontent.com/rigba/ownyourcode-opencode/main/scripts/project-install.ps1 | iex
 ```
 
 **Initialize**
