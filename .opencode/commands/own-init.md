@@ -326,7 +326,7 @@ When these things work, the project is COMPLETE:
 
 ⚠️ **Generated**: [YYYY-MM-DD]
 
-Technology versions change frequently. If this document is more than 30 days old, re-run `/own:init` or check the official documentation for each technology listed above.
+Technology versions change frequently. If this document is more than 30 days old, re-run `/own-init` or check the official documentation for each technology listed above.
 ```
 
 #### roadmap.md
@@ -392,21 +392,21 @@ Phase 1 and generate specs for you to review.
 │  COMMANDS                                    │
 ├──────────────────────────────────────────────┤
 │  Planning                                    │
-│    /own:feature  → Spec your next phase      │
-│    /own:advise   → Prep before coding        │
+│    /own-feature  → Spec your next phase      │
+│    /own-advise   → Prep before coding        │
 │                                              │
 │  Building                                    │
-│    /own:guide    → Get implementation help   │
-│    /own:stuck    → Debug systematically      │
-│    /own:test     → Write tests (you write)   │
-│    /own:docs     → Write docs (you write)    │
+│    /own-guide    → Get implementation help   │
+│    /own-stuck    → Debug systematically      │
+│    /own-test     → Write tests (you write)   │
+│    /own-docs     → Write docs (you write)    │
 │                                              │
 │  Completing                                  │
-│    /own:done     → Finish + code review      │
-│    /own:retro    → Capture what you learned  │
+│    /own-done     → Finish + code review      │
+│    /own-retro    → Capture what you learned  │
 │                                              │
 │  Checking                                    │
-│    /own:status   → See your progress         │
+│    /own-status   → See your progress         │
 └──────────────────────────────────────────────┘
 
 💡 Your learnings persist across ALL projects.

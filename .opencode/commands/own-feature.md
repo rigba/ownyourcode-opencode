@@ -230,8 +230,8 @@ Please review these specs. You should:
 4. REMOVE anything out of scope
 
 When ready:
-- Run /own:advise to prepare for implementation
-- Then /own:guide to start Phase 1
+- Run /own-advise to prepare for implementation
+- Then /own-guide to start Phase 1
 ```
 
 ---
@@ -393,7 +393,7 @@ Based on Context7 and Octocode research:
 
 - [ ] Read and understand spec.md
 - [ ] Read and understand design.md
-- [ ] Run /own:advise for pre-work preparation
+- [ ] Run /own-advise for pre-work preparation
 - [ ] Check that dependencies are met
 - [ ] Ask mentor if anything is unclear
 
@@ -453,8 +453,8 @@ Based on Context7 and Octocode research:
 ## Completion
 
 - [ ] Self-review: Does it match the spec?
-- [ ] Run /own:done for 6 Gates + code review + STAR story
-- [ ] Run /own:retro to capture learnings
+- [ ] Run /own-done for 6 Gates + code review + STAR story
+- [ ] Run /own-retro to capture learnings
 
 ## Progress Tracking
 
@@ -480,4 +480,4 @@ Based on Context7 and Octocode research:
 4. **Edge cases are pre-populated** — Junior adds any we missed
 5. **Out of Scope is critical** — Prevents feature creep
 6. **Use MCPs** — Context7 for docs, Octocode for production patterns
-7. **Prompt /own:advise** — Before implementing, run /own:advise for preparation
+7. **Prompt /own-advise** — Before implementing, run /own-advise for preparation

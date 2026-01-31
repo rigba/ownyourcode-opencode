@@ -84,7 +84,7 @@ If no active specs:
 ```markdown
 ## Active Specs
 
-No active specs. Run /own:feature to start a new feature.
+No active specs. Run /own-feature to start a new feature.
 ```
 
 ---
@@ -166,7 +166,7 @@ Based on status, provide personalized recommendations:
 You're currently working on: [Feature Name]
 Current task: [Task description]
 
-Suggested action: Run /own:guide to continue implementing
+Suggested action: Run /own-guide to continue implementing
 ```
 
 #### If no active work:
@@ -176,7 +176,7 @@ Suggested action: Run /own:guide to continue implementing
 Your roadmap shows these pending phases:
 - Phase 2: Core Features
 
-Suggested action: Run /own:feature to start your next feature
+Suggested action: Run /own-feature to start your next feature
 ```
 
 #### If they've been inactive:
@@ -187,7 +187,7 @@ It's been [X days] since your last commit.
 You were working on: [Feature]
 
 Want to pick up where you left off?
-Run /own:guide to continue, or /own:feature for something new.
+Run /own-guide to continue, or /own-feature for something new.
 ```
 
 #### If low learning stats:
@@ -195,9 +195,9 @@ Run /own:guide to continue, or /own:feature for something new.
 ## Learning Flywheel Reminder
 
 You have [X] learnings documented.
-Run /own:retro after completing tasks to capture insights.
+Run /own-retro after completing tasks to capture insights.
 
-The more you document, the smarter /own:advise becomes!
+The more you document, the smarter /own-advise becomes!
 ```
 
 ---
@@ -249,16 +249,16 @@ At the end of status, remind them of available commands:
 
 ```
 Quick Commands:
-  /own:init          — Initialize project
-  /own:feature       — Start a new feature
-  /own:advise        — Pre-work intelligence gathering
-  /own:guide         — Get implementation help
-  /own:stuck         — Debug an issue
-  /own:test          — Write tests (you write)
-  /own:docs          — Write documentation (you write)
-  /own:done          — Complete a task (with 6 Gates)
-  /own:retro         — Capture learnings
-  /own:status        — You're here!
+  /own-init          — Initialize project
+  /own-feature       — Start a new feature
+  /own-advise        — Pre-work intelligence gathering
+  /own-guide         — Get implementation help
+  /own-stuck         — Debug an issue
+  /own-test          — Write tests (you write)
+  /own-docs          — Write documentation (you write)
+  /own-done          — Complete a task (with 6 Gates)
+  /own-retro         — Capture learnings
+  /own-status        — You're here!
 ```
 
 ---
@@ -282,4 +282,4 @@ Quick Commands:
 3. **Career stats encourage** — Seeing interview stories grow is powerful
 4. **Gentle nudges** — If inactive, welcome them back without judgment
 5. **Keep it visual** — Progress bars are satisfying
-6. **Flywheel reminder** — Encourage /own:retro usage
+6. **Flywheel reminder** — Encourage /own-retro usage

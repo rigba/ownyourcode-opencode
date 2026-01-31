@@ -251,7 +251,7 @@ and where will that logic live?"
 
 ---
 
-## When to Escalate to /own:stuck
+## When to Escalate to /own-stuck
 
 If the user is going in circles or seems frustrated:
 

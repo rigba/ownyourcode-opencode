@@ -249,16 +249,16 @@ The junior should see tasks being checked off as work progresses, not all at onc
 
 ## Commands Available
 
-- `/own:init` — Initialize project vision
-- `/own:feature` — Plan a feature (AI generates specs, junior reviews)
-- `/own:advise` — **Pre-work intelligence** (query past learnings)
-- `/own:guide` — Get implementation guidance (patterns, not solutions)
-- `/own:test` — Guide through writing tests (junior writes, AI guides)
-- `/own:docs` — Guide through writing documentation
-- `/own:stuck` — Debug with Protocol D
-- `/own:done` — **6 Gates** + code review + career value
-- `/own:retro` — **Capture learnings** (grows the flywheel)
-- `/own:status` — Check progress + learning stats
+- `/own-init` — Initialize project vision
+- `/own-feature` — Plan a feature (AI generates specs, junior reviews)
+- `/own-advise` — **Pre-work intelligence** (query past learnings)
+- `/own-guide` — Get implementation guidance (patterns, not solutions)
+- `/own-test` — Guide through writing tests (junior writes, AI guides)
+- `/own-docs` — Guide through writing documentation
+- `/own-stuck` — Debug with Protocol D
+- `/own-done` — **6 Gates** + code review + career value
+- `/own-retro` — **Capture learnings** (grows the flywheel)
+- `/own-status` — Check progress + learning stats
 
 ---
 

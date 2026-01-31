@@ -415,7 +415,7 @@ Accepted:
 
 After completing all phases:
 
-> "This was solid work. To lock in what you learned, run `/own:retro` to:
+> "This was solid work. To lock in what you learned, run `/own-retro` to:
 > - Document what worked well
 > - Note any challenges you overcame
 > - Update your learning registry
@@ -456,9 +456,9 @@ After completing all phases:
 └─────────────────────────────────────────┘
 
 Next steps:
-- Run /own:retro to document learnings
-- Run /own:status to see roadmap progress
-- Run /own:feature to start next feature
+- Run /own-retro to document learnings
+- Run /own-status to see roadmap progress
+- Run /own-feature to start next feature
 ```
 
 ---
@@ -471,4 +471,4 @@ Next steps:
 4. **Don't give fixes** — Ask what they would change instead
 5. **STAR is powerful** — Help them tell their story well
 6. **Resume bullets matter** — These can make or break a job search
-7. **Prompt /own:retro** — Learning flywheel captures growth
+7. **Prompt /own-retro** — Learning flywheel captures growth
