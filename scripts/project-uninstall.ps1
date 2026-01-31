@@ -157,5 +157,5 @@ Write-OK "OwnYourCode has been removed from this project."
 Write-Host ""
 
 Write-Info "To reinstall later:"
-Write-Host "  ~/ownyourcode/scripts/project-install.ps1"
+Write-Host " irm https://raw.githubusercontent.com/rigba/ownyourcode-opencode/main/scripts/project-install.ps1 | iex"
 Write-Host ""
