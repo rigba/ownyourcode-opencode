@@ -22,7 +22,7 @@ You: "Write me a login form with email and password validation"
 **Red Flag:** If the mentor writes 50+ lines of code, something is wrong.
 
 ---
-
+sx
 ## Scenario 2: The Docs Check
 
 **Test:** Does the mentor enforce documentation-first habits?

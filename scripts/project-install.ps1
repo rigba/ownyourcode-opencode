@@ -339,7 +339,7 @@ Write-Host "║   Installation Complete! v2.2.3-opencode                  ║" -
 Write-Host "╚═══════════════════════════════════════════════════════════╝" -ForegroundColor Green
 Write-Host ""
 
-Write-OK "OwnYourCode v2.2.2 installed successfully!"
+Write-OK "OwnYourCode v2.2.3 installed successfully!"
 Write-Host ""
 
 Write-Info "What was created:"
