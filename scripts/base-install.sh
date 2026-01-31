@@ -3,7 +3,7 @@
 # OwnYourCode Base Installation Script (OpenCode Version)
 # AI-Mentored Development for Juniors
 #
-# Usage: curl -sSL https://raw.githubusercontent.com/james/ownyourcode-opencode/main/scripts/base-install.sh | bash
+# Usage: curl -sSL https://raw.githubusercontent.com/rigba/ownyourcode-opencode/main/scripts/base-install.sh | bash
 
 set -e
 
@@ -15,7 +15,7 @@ BLUE='\033[0;34m'
 NC='\033[0m'
 
 # Config
-REPO_URL="https://github.com/james/ownyourcode-opencode.git"
+REPO_URL="https://github.com/rigba/ownyourcode-opencode.git"
 INSTALL_DIR="$HOME/ownyourcode"
 
 # Helpers
@@ -76,7 +76,7 @@ if [ ! -d "$INSTALL_DIR" ]; then
     else
         # Fallback to curl + unzip
         warn "git not found, downloading zip..."
-        ZIP_URL="https://github.com/james/ownyourcode-opencode/archive/refs/heads/main.zip"
+        ZIP_URL="https://github.com/rigba/ownyourcode-opencode/archive/refs/heads/main.zip"
         curl -sSL "$ZIP_URL" -o /tmp/ownyourcode.zip
         unzip -q /tmp/ownyourcode.zip -d /tmp
         mv /tmp/ownyourcode-opencode-main "$INSTALL_DIR"
